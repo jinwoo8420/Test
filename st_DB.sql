@@ -150,3 +150,12 @@ FROM tbl_fb_stadium ST
         ON ST.fb_st_pk = S.fb_st_pk
         WHERE ST.fb_st_pk ='fb_seoul'
 ORDER BY fb_st_seq;
+
+
+
+	SELECT S.fb_st_date, S.fb_st_time, S.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_seoul S
+		        ON ST.fb_st_pk = S.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_seoul'
+		ORDER BY fb_st_seq

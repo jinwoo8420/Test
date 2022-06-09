@@ -12,7 +12,6 @@ import com.seasoning.app.service.FootBallService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @RequestMapping(value = "/football")
 @Controller
 public class FootBallController {
@@ -20,38 +19,22 @@ public class FootBallController {
 	@Autowired
 	private FootBallService fbService;
 
-//	private final FootBallService fbService;
-//
-//	public FootBallController(FootBallService fbService) {
-//		this.fbService = fbService;
-//	}
-
 	@RequestMapping(value = { "/", "" })
 	public String home() {
 		return "football/football-seoul";
 	}
 
 	@RequestMapping(value = "/football-seoul")
-	public String seoul() {
+	public String seoul(Model model) {
 
-		return null;
-	}
-
-//	@RequestMapping(value = "/fb-schedule")
-//	public String schedule(Model model) {
-//
-//		return "football/football-seoul";
-//	}
-
-	@RequestMapping(value = "/fb-schedule")
-	public String schedule(Model model) {
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FB", fblist);
+		model.addAttribute("FBS", fblist);
 
-		log.debug("테스트 : ", fblist);
 
+		
 		return null;
 	}
+
 
 }

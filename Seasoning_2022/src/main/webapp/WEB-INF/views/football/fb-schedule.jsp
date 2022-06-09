@@ -33,7 +33,7 @@
 					</thead>
 
 					<tbody>
-						<c:forEach items="${FB}" var="FB">
+						<c:forEach items="${FBS}" var="FB">
 							<tr>
 								<td>${FB.fb_st_date}</td>
 								<td>${FB.fb_st_time}</td>
