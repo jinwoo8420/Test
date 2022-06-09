@@ -9,7 +9,7 @@ import com.seasoning.app.model.FootBallScheduleVO;
 import com.seasoning.app.persistence.FootBallDao;
 import com.seasoning.app.service.FootBallService;
 
-@Service("footballService")
+@Service
 public class FootBallServiceImpl implements FootBallService {
 
 //	private final FootBallDao fbDao;
@@ -31,7 +31,7 @@ public class FootBallServiceImpl implements FootBallService {
 	public List<FootBallScheduleVO> selectAll() {
 		List<FootBallScheduleVO> fbSchedule = fbDao.selectAll();
 
-		return fbSchedule;
+		return null;
 	}
 
 	@Override

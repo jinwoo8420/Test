@@ -9,7 +9,7 @@ import com.seasoning.app.model.BaseBallScheduleVO;
 import com.seasoning.app.persistence.BaseBallDao;
 import com.seasoning.app.service.BaseBallService;
 
-@Service("baseballService")
+@Service
 public class BaseBallServiceImpl implements BaseBallService {
 	@Autowired
 	private BaseBallDao bbDao;

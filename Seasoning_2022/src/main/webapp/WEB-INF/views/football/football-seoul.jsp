@@ -28,7 +28,7 @@
  
         <div id="drop">
           <ul id="menu">
-            <li id="logo"><a href="${rootPath}/"><img src="../images/logo.png"></a></li>
+            <li id="logo"><a href="${rootPath}/"><img src="${rootPath}/static/images/logo.png"></a></li>
             <li id="soccer">
               <a href="../html/soccer-seoul.html">축구</a>
               <ul class="drop-menu drop-soccer">

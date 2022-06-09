@@ -26,23 +26,13 @@
 
 	<!-- SqlSessionFactory -->
 	<!-- Dao, Mapper 등을 사용하여 DB 연결하는 bean 생산기지 설정 -->
-	<!-- INSERT UPDATE를 수행할 때 부적절한 열 유형 1111 문제를 설정에서 제거하기 -->
-	<!-- 이 속성을 지정해두면 SQL, INSERT, UPDATE에서 jdbcType = VARCHAR -->
 	<bean id="sqlSession"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="ds" />
 		<property name="typeAliasesPackage"
 			value="com.seasoning.app.model" />
 		<property name="mapperLocations"
-			value="/WEB-INF/spring/mapper/*-mapper.xml" />
-		<property name="configuration">
-			<bean class="org.apache.ibatis.session.Configuration">
-				<property name="jdbcTypeForNull" value="VARCHAR" />
-				<property name="cacheEnabled" value="true" />
-				<property name="defaultExecutorType" value="REUSE" />
-				<property name="mapUnderscoreToCamelCase" value="false"></property>
-			</bean>
-		</property>
+			value="/WEB-INF/spring/mapper/*-mapper.xml" />			
 	</bean>
 
 	<!-- SqlSessionTemplate -->
