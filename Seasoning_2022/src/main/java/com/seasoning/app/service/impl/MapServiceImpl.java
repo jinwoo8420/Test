@@ -17,8 +17,9 @@ public class MapServiceImpl implements MapService {
 
 	@Override
 	public List<MapVO> selectAll() {
-		List<MapVO> map = mapDao.selectAll();
-		return map;
+//		List<MapVO> map = mapDao.selectAll();
+//		return map;
+		return null;
 	}
 
 	@Override

@@ -38,13 +38,13 @@
 					</thead>
 
 					<tbody>
-						<c:forEach items="${FOOTBALL}" var="FB">
+					<%-- 	<c:forEach items="${FOOTBALL}" var="FB">
 							<tr>
 								<td>${FB.fb_st_date}</td>
 								<td>${FB.fb_st_time}</td>
 								<td>${FB.fb_st_match}</td>
 							</tr>
-						</c:forEach>
+						</c:forEach> --%>
 					</tbody>
 				</table>
 				<a href="https://www.fcseoul.com/tickets/reserveSingleTicket">

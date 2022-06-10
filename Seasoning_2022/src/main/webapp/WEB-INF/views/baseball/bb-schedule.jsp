@@ -40,7 +40,7 @@
 					</thead>
 
 					<tbody>
-						<c:forEach items="${BASEBALL}" var="BB">
+					<%-- 	<c:forEach items="${BASEBALL}" var="BB">
 							<tr>
 								<td>${BB.st_date}</td>
 								<td>${BB.st_match}</td>
@@ -66,7 +66,7 @@
 								<td>${BB4.st_date}</td>
 								<td>${BB4.st_match}</td>
 							</tr>
-						</c:forEach>
+						</c:forEach> --%>
 					</tbody>
 				</table>
 				<a href="https://www.fcseoul.com/tickets/reserveSingleTicket">

@@ -29,8 +29,9 @@ public class FootBallServiceImpl implements FootBallService {
 
 	@Override
 	public List<FootBallScheduleVO> selectAll() {
-		List<FootBallScheduleVO> fbSchedule = fbDao.selectAll();
-		return fbSchedule;
+//		List<FootBallScheduleVO> fbSchedule = fbDao.selectAll();
+//		return fbSchedule;
+		return null;
 	}
 
 	@Override

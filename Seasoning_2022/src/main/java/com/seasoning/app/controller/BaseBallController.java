@@ -24,11 +24,11 @@ public class BaseBallController {
 
 	@RequestMapping(value = { "/", "" })
 	public String home() {
-		return "baseball/baseball-seoul";
+		return "baseball/bb-dusan";
 	}
 
-	@RequestMapping(value = "/baseball-seoul")
-	public String seoul(Model model) {
+	@RequestMapping(value = "/bb-dusan")
+	public String dusan(Model model) {
 
 		List<BaseBallScheduleVO> bblist = bbService.selectJun();
 		List<BaseBallScheduleVO> bblist2 = bbService.selectJul();

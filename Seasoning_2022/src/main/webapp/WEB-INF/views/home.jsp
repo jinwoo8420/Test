@@ -19,7 +19,7 @@
 	<div class="main_button">
 		<img class="logo_img" src="${rootPath}/static/images/로고1.png" />
 
-		<button class="football" onclick="location.href = '${rootPath}/football/football-seoul'">
+		<button class="football" onclick="location.href = '${rootPath}/football/fb-seoul'">
 			<img class="button_img" src="${rootPath}/static/images/football_text.png" /><br />
 			<p class="m_b_text">K-리그</p>
 			<p class="button_text">
@@ -28,7 +28,7 @@
 		</button>
 		<img class="football_img" src="${rootPath}/static/images/football.png" />
 
-		<button class="baseball" onclick="location.href = '${rootPath}/baseball/baseball-seoul'">
+		<button class="baseball" onclick="location.href = '${rootPath}/baseball/bb-dusan'">
 			<img class="button_img" src="${rootPath}/static/images/baseball_text.png" /><br />
 			<p class="m_b_text">KBO-리그</p>
 			<p class="button_text">

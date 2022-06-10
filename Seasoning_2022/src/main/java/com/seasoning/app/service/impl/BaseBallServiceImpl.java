@@ -16,26 +16,30 @@ public class BaseBallServiceImpl implements BaseBallService {
 
 	@Override
 	public List<BaseBallScheduleVO> selectJun() {
-		List<BaseBallScheduleVO> bbSchedule = bbDao.selectJun();
-		return bbSchedule;
+//		List<BaseBallScheduleVO> bbSchedule = bbDao.selectJun();
+//		return bbSchedule;
+		return null;
 	}
 
 	@Override
 	public List<BaseBallScheduleVO> selectJul() {
-		List<BaseBallScheduleVO> bbSchedule = bbDao.selectJul();
-		return bbSchedule;
+//		List<BaseBallScheduleVO> bbSchedule = bbDao.selectJul();
+//		return bbSchedule;
+		return null;
 	}
 
 	@Override
 	public List<BaseBallScheduleVO> selectAug() {
-		List<BaseBallScheduleVO> bbSchedule = bbDao.selectAug();
-		return bbSchedule;
+//		List<BaseBallScheduleVO> bbSchedule = bbDao.selectAug();
+//		return bbSchedule;
+		return null;
 	}
 
 	@Override
 	public List<BaseBallScheduleVO> selectSept() {
-		List<BaseBallScheduleVO> bbSchedule = bbDao.selectSept();
-		return bbSchedule;
+//		List<BaseBallScheduleVO> bbSchedule = bbDao.selectSept();
+//		return bbSchedule;
+		return null;
 	}
 
 	@Override
