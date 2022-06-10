@@ -238,5 +238,5 @@
   </body>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be01097258cdbbe3042dc5464adc574e&libraries=services,clusterer">
   </script>
-  <script src="${rootPath}/static/js/map.js"></script>
+  <script src="${rootPath}/static/js/map.js?ver=2022-06-10-001"></script>
 </html>

@@ -7,6 +7,15 @@ create table tbl_bb_stadium (
 
 drop table tbl_bb_stadium;
 
+SELECT * FROM tbl_bb_stadium;
+
+SELECT bb_st_x, bb_st_y
+FROM tbl_bb_stadium;
+
+SELECT bb_st_x, bb_st_y
+FROM tbl_bb_stadium
+WHERE st_pk LIKE '%bb_dusan%';
+
 create table tbl_schedule_dusan (
     st_seq      NUMBER(5)    PRIMARY KEY,
     st_pk       VARCHAR2(20),

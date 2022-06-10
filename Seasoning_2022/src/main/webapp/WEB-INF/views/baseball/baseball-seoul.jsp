@@ -102,6 +102,16 @@
           
           <div id="ticket-book">
           	<!-- 경기일정 부분 따로 뺌 -->
+          	
+          	<c:forEach items="${MAP}" var="M">
+          	     <div>
+			        <%-- <p id="st_x">${M.bb_st_x}</p>
+			        <p id="st_y">${M.bb_st_y}</p> --%>
+			        <p id="st_x">37.51215</p>
+			        <p id="st_y">127.071976</p>
+        		 </div>
+          	</c:forEach>
+          	  
           	<%@ include file="/WEB-INF/views/baseball/bb-schedule.jsp" %>
           </div>
           
@@ -123,11 +133,11 @@
       </article>
       <article>
         <h1 id="around-tour-text">주변 관광지</h1>
+ 
         <div id="around-tour-box">
           
+          <!-- 카카오 지도 -->
           <div id="map" style="width: 780px; height: 700px"></div>
-          
-          
 
           <div id="tour-list">
             <div id="choice-tour-menu">
@@ -238,5 +248,5 @@
   </body>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be01097258cdbbe3042dc5464adc574e&libraries=services,clusterer">
   </script>
-  <script src="${rootPath}/static/js/map.js"></script>
+  <script src="${rootPath}/static/js/bb_map.js?ver=2022-06-10-009"></script>
 </html>
