@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.seasoning.app.model.FootBallScheduleVO;
 import com.seasoning.app.service.FootBallService;
 
-import lombok.extern.slf4j.Slf4j;
-
 @RequestMapping(value = "/football")
 @Controller
 public class FootBallController {
@@ -29,9 +27,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FBS", fblist);
-
-
+		model.addAttribute("FOOTBALL", fblist);
 		
 		return null;
 	}

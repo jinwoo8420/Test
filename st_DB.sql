@@ -16,7 +16,7 @@ create table tbl_schedule_dusan (
 
 drop table tbl_schedule_dusan;
 
-SELECT D.st_seq, ST.st_pk, ST.bb_st_name, D.st_date, D.st_match
+SELECT D.st_date, D.st_match
 FROM tbl_bb_stadium ST
     LEFT JOIN tbl_schedule_dusan D
         ON ST.st_pk = D.st_pk        
@@ -27,12 +27,12 @@ create table tbl_schedule_lg (
     st_seq      NUMBER(5)    PRIMARY KEY,
     st_pk       VARCHAR2(20),
     st_date     nVARCHAR2(20),
-    st_match    nVARCHAR2(20)    
+    st_match    nVARCHAR2(20)
 );
 
 drop table tbl_schedule_lg;
 
-SELECT ST.st_pk, ST.bb_st_name, L.st_date, L.st_match
+SELECT L.st_date, L.st_match
 FROM tbl_bb_stadium ST
     LEFT JOIN tbl_schedule_lg L
         ON ST.st_pk = L.st_pk
@@ -150,12 +150,3 @@ FROM tbl_fb_stadium ST
         ON ST.fb_st_pk = S.fb_st_pk
         WHERE ST.fb_st_pk ='fb_seoul'
 ORDER BY fb_st_seq;
-
-
-
-	SELECT S.fb_st_date, S.fb_st_time, S.fb_st_match
-		FROM tbl_fb_stadium ST
-		    LEFT JOIN tbl_fb_schedule_seoul S
-		        ON ST.fb_st_pk = S.fb_st_pk
-		        WHERE ST.fb_st_pk ='fb_seoul'
-		ORDER BY fb_st_seq

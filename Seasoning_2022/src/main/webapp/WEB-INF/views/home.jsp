@@ -28,7 +28,7 @@
 		</button>
 		<img class="football_img" src="${rootPath}/static/images/football.png" />
 
-		<button class="baseball" onclick="">
+		<button class="baseball" onclick="location.href = '${rootPath}/baseball/baseball-seoul'">
 			<img class="button_img" src="${rootPath}/static/images/baseball_text.png" /><br />
 			<p class="m_b_text">KBO-리그</p>
 			<p class="button_text">
@@ -37,7 +37,7 @@
 		</button>
 		<img class="baseball_img" src="${rootPath}/static/images/baseball.png" />
 
-		<button class="volleyball"onclick="">
+		<button class="volleyball"onclick="location.href = '${rootPath}/volleyball/volleyball-seoul'">
 			<img class="button_img" src="${rootPath}/static/images/volleyball_text.png" /><br />
 			<p class="m_b_text">V-리그</p>
 			<p class="button_text">

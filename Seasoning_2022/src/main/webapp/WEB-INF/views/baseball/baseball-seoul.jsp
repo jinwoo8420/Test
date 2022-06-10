@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Season + ing ㅣ football-seoul</title>
+    <title>Season + ing ㅣ baseball-seoul</title>
     <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
     <link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css" />
     <link rel="stylesheet" href="${rootPath}/static/css/area-view.css" />
@@ -96,13 +96,13 @@
     </header>
     <section>
       <article>
-        <h1>케이리그</h1>
+        <h1>KBO</h1>
         <div id="k-league-box">
           <div id="korea-map"><img src="${rootPath}/static/images/korea-map.png" /></div>
           
           <div id="ticket-book">
           	<!-- 경기일정 부분 따로 뺌 -->
-          	<%@ include file="/WEB-INF/views/football/fb-schedule.jsp" %>
+          	<%@ include file="/WEB-INF/views/baseball/bb-schedule.jsp" %>
           </div>
           
         </div>

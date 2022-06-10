@@ -13,11 +13,15 @@
 <section class="schedule-content">
 	<article class="sch-title">
 		<p>
-			FC서울 홈구장: <span>서울 월드컵 경기장</span>
+			두산 홈구장: <span>두산</span>
 		</p>
 	</article>
 	<img src="${rootPath}/static/images/seoul.jpg" />
 	<div class="month-container">
+		<div class="month-btn-box">
+			<button class="month-btn-prev">&#10094;</button>
+			<button class="month-btn-next">&#10095;</button>
+		</div>
 		<div class="month-table">
 			<div class="month-text">
 				<p>6월 경기 일정</p>
@@ -27,22 +31,40 @@
 					<colgroup>
 						<col width="300px">
 						<col width="300px">
-						<col width="300px">
 					</colgroup>
 					<thead>
 						<tr>
 							<td>날짜</td>
-							<td>시간</td>
 							<td>매치업</td>
 						</tr>
 					</thead>
 
 					<tbody>
-						<c:forEach items="${FOOTBALL}" var="FB">
+						<c:forEach items="${BASEBALL}" var="BB">
 							<tr>
-								<td>${FB.fb_st_date}</td>
-								<td>${FB.fb_st_time}</td>
-								<td>${FB.fb_st_match}</td>
+								<td>${BB.st_date}</td>
+								<td>${BB.st_match}</td>
+							</tr>
+						</c:forEach>
+						
+						<c:forEach items="${BASEBALL2}" var="BB2">
+							<tr>
+								<td>${BB2.st_date}</td>
+								<td>${BB2.st_match}</td>
+							</tr>
+						</c:forEach>
+
+						<c:forEach items="${BASEBALL3}" var="BB3">
+							<tr>
+								<td>${BB3.st_date}</td>
+								<td>${BB3.st_match}</td>
+							</tr>
+						</c:forEach>
+
+						<c:forEach items="${BASEBALL4}" var="BB4">
+							<tr>
+								<td>${BB4.st_date}</td>
+								<td>${BB4.st_match}</td>
 							</tr>
 						</c:forEach>
 					</tbody>
