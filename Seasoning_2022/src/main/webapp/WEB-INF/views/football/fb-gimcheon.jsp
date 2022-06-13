@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css" />
 <link rel="stylesheet"
 	href="${rootPath}/static/css/area-view.css?ver=2022-06-11-012" />
-<link rel="stylesheet" href="${rootPath}/static/css/schedule.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script

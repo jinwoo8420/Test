@@ -3,10 +3,10 @@
 <c:set value="${pageContext.request.contextPath}" var="rootPath" />
 
 <style>
-.schedule-content img{
-  height: 272px;
-  width: 560px;
-  margin: 10px 20px 0 20px;
+.schedule-content img {
+	height: 272px;
+	width: 560px;
+	margin: 10px 20px 0 20px;
 }
 </style>
 
@@ -40,13 +40,13 @@
 					</thead>
 
 					<tbody>
-					<%-- 	<c:forEach items="${BASEBALL}" var="BB">
+						<c:forEach items="${BASEBALL}" var="BB">
 							<tr>
 								<td>${BB.st_date}</td>
 								<td>${BB.st_match}</td>
 							</tr>
 						</c:forEach>
-						
+
 						<c:forEach items="${BASEBALL2}" var="BB2">
 							<tr>
 								<td>${BB2.st_date}</td>
@@ -66,7 +66,7 @@
 								<td>${BB4.st_date}</td>
 								<td>${BB4.st_match}</td>
 							</tr>
-						</c:forEach> --%>
+						</c:forEach>
 					</tbody>
 				</table>
 				<a href="https://www.fcseoul.com/tickets/reserveSingleTicket">

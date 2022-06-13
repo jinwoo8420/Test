@@ -13,15 +13,15 @@
 <link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css" />
 <link rel="stylesheet"
 	href="${rootPath}/static/css/area-view.css?ver=2022-06-11-012" />
-<link rel="stylesheet" href="${rootPath}/static/css/schedule.css" />
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
 
 </head>
-<body>
-	<header>
+<body id="fb_body">
+	<header id="fb_header">
 		<nav id="nav-menu">
 
 			<div id="drop">
@@ -89,7 +89,9 @@
 			</div>
 		</nav>
 	</header>
-	<section>
+	
+	<!--body start-->
+	<section id="fb_section">
 		<article>
 			<h1>케이리그</h1>
 			<div id="k-league-box">
@@ -166,12 +168,17 @@
 
 
 	</section>
+	<!--body start-->
+	
 	<footer></footer>
 </body>
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be01097258cdbbe3042dc5464adc574e&libraries=services,clusterer">
 	
 </script>
-<script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-002"></script>
-
+<script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-004"></script>
+<!--js start-->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="${rootPath}/static/js/map_button.js?ver=2022-06-13-013"></script>
+<!--js end-->
 </html>

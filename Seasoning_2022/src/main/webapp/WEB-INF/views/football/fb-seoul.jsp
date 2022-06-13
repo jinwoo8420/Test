@@ -12,8 +12,8 @@
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
 <link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css" />
 <link rel="stylesheet"
-	href="${rootPath}/static/css/area-view.css?ver=2022-06-11-012" />
-<link rel="stylesheet" href="${rootPath}/static/css/schedule.css" />
+	href="${rootPath}/static/css/area-view.css?ver=2022-06-11-014" />
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script
@@ -89,7 +89,9 @@
 			</div>
 		</nav>
 	</header>
-	<section>
+	
+	<!--body start-->
+	<section id="fb_section">
 		<article>
 			<h1>케이리그</h1>
 			<div id="k-league-box">
@@ -108,20 +110,19 @@
 				</div>
 
 			</div>
-			<a><div class="map-point seoul"
-					style="font-size: 18px; background-color: rgb(0, 24, 65);">FC
-					서울</div></a> <a><div class="map-point gangwon1">강원 FC</div></a> <a><div
-					class="map-point gangwon2">강원 FC</div></a> <a><div
-					class="map-point gimcheon">김천 상무</div></a> <a><div
-					class="map-point deagu">대구 FC</div></a> <a><div
-					class="map-point seongnam">성남 FC</div></a> <a><div
-					class="map-point suwon1">수원 삼성</div></a> <a><div
-					class="map-point suwon2">수원 FC</div></a> <a><div
-					class="map-point ulsan">울산 현대</div></a> <a><div
-					class="map-point incheon">인천 UNT</div></a> <a><div
-					class="map-point jeonbuk">전북 현대</div></a> <a><div
-					class="map-point jeju">제주 UNT</div></a> <a><div
-					class="map-point pohang">포항 스틸러스</div></a>
+			<a><div class="map-point seoul" style="font-size: 18px; background-color: rgb(0, 24, 65);">FC 서울</div></a> 
+			<a class="map-point gangwon1" href="javascript:void(0);" url="${rootPath}/football/fb-gangwon1" onclick="movePage(this)"><div">강원 FC(춘천)</div></a> 
+ 			<a class="map-point gangwon2" href="javascript:void(0);" url="${rootPath}/football/fb-gangwon2" onclick="movePage(this)"><div">강원 FC(강릉)</div></a> 
+			<a><div class="map-point gimcheon">김천 상무</div></a> 
+			<a><div class="map-point deagu">대구 FC</div></a> 
+			<a><div class="map-point seongnam">성남 FC</div></a> 
+			<a><div class="map-point suwon1">수원 삼성</div></a> 
+			<a><div class="map-point suwon2">수원 FC</div></a> 
+			<a><div class="map-point ulsan">울산 현대</div></a> 
+			<a><div class="map-point incheon">인천 UNT</div></a> 
+			<a class="map-point jeonbuk" href="javascript:void(0);" url="${rootPath}/football/fb-jeonbuk" onclick="movePage(this)"><div>전북 현대</div></a> 
+			<a><div class="map-point jeju">제주 UNT</div></a> 
+			<a><div class="map-point pohang">포항 스틸러스</div></a>
 		</article>
 		<article>
 			<h1 id="around-tour-text">주변 관광지</h1>
@@ -166,6 +167,8 @@
 
 
 	</section>
+	<!--body end-->
+	
 	<footer></footer>
 </body>
 <script type="text/javascript"
@@ -173,5 +176,9 @@
 	
 </script>
 <script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-002"></script>
+<!--js start-->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="${rootPath}/static/js/map_button.js?ver=2022-06-13-013"></script>
+<!--js end-->
 
 </html>

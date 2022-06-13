@@ -25,9 +25,11 @@ public class FootBallController {
 	@RequestMapping(value = "/fb-seoul")
 	public String seoul(Model model) {
 
-		List<FootBallScheduleVO> fblist = fbService.selectAll();
+		List<FootBallScheduleVO> fblist = fbService.selectSeoul();
+		List<FootBallScheduleVO> fbst = fbService.selectSt_Seoul();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_SEOUL", fblist);
+		model.addAttribute("ST_SEOUL", fbst);
 
 		return null;
 	}
@@ -37,7 +39,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_DAEGU", fblist);
 
 		return null;
 	}
@@ -45,9 +47,9 @@ public class FootBallController {
 	@RequestMapping(value = "/fb-gangwon1")
 	public String gangwon1(Model model) {
 
-		List<FootBallScheduleVO> fblist = fbService.selectAll();
+		List<FootBallScheduleVO> fblist = fbService.selectGangwon1();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_GANGWON1", fblist);
 
 		return null;
 	}
@@ -55,9 +57,9 @@ public class FootBallController {
 	@RequestMapping(value = "/fb-gangwon2")
 	public String gangwon2(Model model) {
 
-		List<FootBallScheduleVO> fblist = fbService.selectAll();
+		List<FootBallScheduleVO> fblist = fbService.selectGangwon2();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_GANGWON2", fblist);
 
 		return null;
 	}
@@ -67,7 +69,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_GIMCHEON", fblist);
 
 		return null;
 	}
@@ -77,7 +79,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_INCHEON", fblist);
 
 		return null;
 	}
@@ -87,7 +89,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_JEJU", fblist);
 
 		return null;
 	}
@@ -95,9 +97,11 @@ public class FootBallController {
 	@RequestMapping(value = "/fb-jeonbuk")
 	public String jeonbuk(Model model) {
 
-		List<FootBallScheduleVO> fblist = fbService.selectAll();
+		List<FootBallScheduleVO> fblist = fbService.selectJeonbuk();
+		List<FootBallScheduleVO> fbst = fbService.selectSt_Jeonbuk();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_JEONBUK", fblist);
+		model.addAttribute("ST_JEONBUK", fbst);
 
 		return null;
 	}
@@ -107,7 +111,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_POHANG", fblist);
 
 		return null;
 	}
@@ -117,7 +121,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_SEONGNAM", fblist);
 
 		return null;
 	}
@@ -127,7 +131,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_SUWON_SS", fblist);
 
 		return null;
 	}
@@ -137,7 +141,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_SUWON", fblist);
 
 		return null;
 	}
@@ -147,7 +151,7 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectAll();
 
-		model.addAttribute("FOOTBALL", fblist);
+		model.addAttribute("FB_ULSAN", fblist);
 
 		return null;
 	}

@@ -5,12 +5,59 @@
 
 <!-- namespace : Dao 인터페이스와 연결하여 mybatis로 하여금 클래스를 작성하도록 하기 위한 설정 -->
 <mapper namespace="com.seasoning.app.persistence.FootBallDao">
-	<select id="selectAll" resultType="FootBallScheduleVO">
+	<select id="selectSeoul" resultType="FootBallScheduleVO">
 		SELECT S.fb_st_date, S.fb_st_time, S.fb_st_match
 		FROM tbl_fb_stadium ST
 		    LEFT JOIN tbl_fb_schedule_seoul S
 		        ON ST.fb_st_pk = S.fb_st_pk
 		        WHERE ST.fb_st_pk ='fb_seoul'
 		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Seoul" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_seoul'
+	</select>
+	
+	<select id="selectJeonbuk" resultType="FootBallScheduleVO">
+		SELECT J.fb_st_date, J.fb_st_time, J.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_jeonbuk J
+		        ON ST.fb_st_pk = J.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_jeonbuk'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Jeonbuk" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_jeonbuk'
+	</select>
+	
+	<select id="selectGangwon1" resultType="FootBallScheduleVO">
+		SELECT G.fb_st_date, G.fb_st_time, G.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_gangwon1 G
+		        ON ST.fb_st_pk = G.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_gangwon1'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Gangwon1" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_gangwon1'
+	</select>
+	
+	<select id="selectGangwon2" resultType="FootBallScheduleVO">
+		SELECT G.fb_st_date, G.fb_st_time, G.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_gangwon1 G
+		        ON ST.fb_st_pk = G.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_gangwon2'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Gangwon2" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_gangwon2'
 	</select>
 </mapper>

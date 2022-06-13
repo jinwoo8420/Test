@@ -159,3 +159,57 @@ FROM tbl_fb_stadium ST
         ON ST.fb_st_pk = S.fb_st_pk
         WHERE ST.fb_st_pk ='fb_seoul'
 ORDER BY fb_st_seq;
+
+create table tbl_fb_schedule_jeonbuk (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+drop table tbl_fb_schedule_jeonbuk;
+
+		SELECT J.fb_st_date, J.fb_st_time, J.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_jeonbuk J
+		        ON ST.fb_st_pk = J.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_jeonbuk'
+		ORDER BY fb_st_seq;
+        
+create table tbl_fb_schedule_gangwon1 (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+drop table tbl_fb_schedule_gangwon1;
+
+SELECT G.fb_st_date, G.fb_st_time, G.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_gangwon1 G
+		        ON ST.fb_st_pk = G.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_gangwon1'
+ORDER BY fb_st_seq;
+
+SELECT G.fb_st_date, G.fb_st_time, G.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_gangwon1 G
+		        ON ST.fb_st_pk = G.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_gangwon2'
+ORDER BY fb_st_seq;
+
+create table tbl_fb_schedule_gangwon2 (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+drop table tbl_fb_schedule_gangwon2;
+
+SELECT * FROM tbl_fb_stadium
+    WHERE fb_st_pk ='fb_jeonbuk';
