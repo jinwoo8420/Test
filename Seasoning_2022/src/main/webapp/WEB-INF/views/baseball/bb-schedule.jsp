@@ -25,8 +25,6 @@
 				</p>
 			</c:forEach>
 
-
-
 			<c:forEach items="${ST_GANGWON2}" var="GANGWON2">
 				<p>
 					<span>${GANGWON2.fb_st_name}</span>

@@ -8,7 +8,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Season + ing ㅣ baseball-dusan</title>
+<title>Season + ing ㅣ baseball-kt</title>
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
 <link rel="stylesheet" href="${rootPath}/static/css/kbo-box.css?ver=2022-06-14-005" />
 <link rel="stylesheet" href="${rootPath}/static/css/area-view.css" />
@@ -33,21 +33,13 @@
 				</div>
 
 				<div id="ticket-book">
-					<!-- 경기일정 부분 따로 뺌 -->
-
-					<%--          	<c:forEach items="${MAP}" var="M">
-          	     <div>
-			        <p id="st_x">${M.bb_st_x}</p>
-			        <p id="st_y">${M.bb_st_y}</p>
-			        <p id="st_x">37.51215</p>
-			        <p id="st_y">127.071976</p>
-        		 </div>
-          	</c:forEach> --%>
+					
 					<div style="display: none;">
 						<p id="st_x">37.299759</p>
 						<p id="st_y">127.009781</p>
 					</div>
-
+					
+					<!-- 경기일정 부분 따로 뺌 -->
 					<%@ include file="/WEB-INF/views/baseball/bb-schedule.jsp"%>
 				</div>
 

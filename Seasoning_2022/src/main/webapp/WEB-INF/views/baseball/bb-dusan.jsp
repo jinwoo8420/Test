@@ -33,21 +33,13 @@
 				</div>
 
 				<div id="ticket-book">
-					<!-- 경기일정 부분 따로 뺌 -->
-
-					<%--          	<c:forEach items="${MAP}" var="M">
-          	     <div>
-			        <p id="st_x">${M.bb_st_x}</p>
-			        <p id="st_y">${M.bb_st_y}</p>
-			        <p id="st_x">37.51215</p>
-			        <p id="st_y">127.071976</p>
-        		 </div>
-          	</c:forEach> --%>
+					
 					<div style="display: none;">
 						<p id="st_x">37.51215</p>
 						<p id="st_y">127.071976</p>
 					</div>
-
+					
+					<!-- 경기일정 부분 따로 뺌 -->
 					<%@ include file="/WEB-INF/views/baseball/bb-schedule.jsp"%>
 				</div>
 
