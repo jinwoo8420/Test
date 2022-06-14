@@ -15,29 +15,41 @@ public class BaseBallServiceImpl implements BaseBallService {
 	private BaseBallDao bbDao;
 
 	@Override
-	public List<BaseBallScheduleVO> selectJun() {
-		List<BaseBallScheduleVO> bbSchedule = bbDao.selectJun();
+	public List<BaseBallScheduleVO> selectDusan() {
+		List<BaseBallScheduleVO> bbSchedule = bbDao.selectDusan();
+		return bbSchedule;
+	}
+	
+	@Override
+	public List<BaseBallScheduleVO> selectSt_Dusan() {
+		List<BaseBallScheduleVO> bbSchedule = bbDao.selectSt_Dusan();
+		return bbSchedule;
+	}
+	
+	@Override
+	public List<BaseBallScheduleVO> selectLg() {
+		List<BaseBallScheduleVO> bbSchedule = bbDao.selectLg();
+		return bbSchedule;
+	}
+	
+	@Override
+	public List<BaseBallScheduleVO> selectSt_Lg() {
+		List<BaseBallScheduleVO> bbSchedule = bbDao.selectSt_Lg();
 		return bbSchedule;
 	}
 
 	@Override
-	public List<BaseBallScheduleVO> selectJul() {
-		List<BaseBallScheduleVO> bbSchedule = bbDao.selectJul();
+	public List<BaseBallScheduleVO> selectKia() {
+		List<BaseBallScheduleVO> bbSchedule = bbDao.selectKia();
 		return bbSchedule;
 	}
-
+	
 	@Override
-	public List<BaseBallScheduleVO> selectAug() {
-		List<BaseBallScheduleVO> bbSchedule = bbDao.selectAug();
+	public List<BaseBallScheduleVO> selectSt_Kia() {
+		List<BaseBallScheduleVO> bbSchedule = bbDao.selectSt_Kia();
 		return bbSchedule;
 	}
-
-	@Override
-	public List<BaseBallScheduleVO> selectSept() {
-		List<BaseBallScheduleVO> bbSchedule = bbDao.selectSept();
-		return bbSchedule;
-	}
-
+	
 	@Override
 	public List<BaseBallScheduleVO> selectAll() {
 		// TODO Auto-generated method stub

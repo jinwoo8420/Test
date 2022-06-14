@@ -28,8 +28,8 @@ drop table tbl_schedule_dusan;
 SELECT D.st_date, D.st_match
 FROM tbl_bb_stadium ST
     LEFT JOIN tbl_schedule_dusan D
-        ON ST.st_pk = D.st_pk        
-        WHERE D.st_date LIKE '%6월%'
+        ON ST.st_pk = D.st_pk
+        WHERE D.st_pk = 'bb_dusan'
 ORDER BY st_seq;
 
 create table tbl_schedule_lg (
@@ -213,3 +213,77 @@ drop table tbl_fb_schedule_gangwon2;
 
 SELECT * FROM tbl_fb_stadium
     WHERE fb_st_pk ='fb_jeonbuk';
+
+create table tbl_fb_schedule_incheon (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+create table tbl_fb_schedule_seongnam (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+create table tbl_fb_schedule_suwon_ss (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+create table tbl_fb_schedule_suwon (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+drop table tbl_fb_schedule_suwon;
+
+create table tbl_fb_schedule_gimcheon (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+create table tbl_fb_schedule_daegu (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+create table tbl_fb_schedule_pohang (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+create table tbl_fb_schedule_ulsan (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);
+
+create table tbl_fb_schedule_jeju (
+    fb_st_seq      NUMBER(5)    PRIMARY KEY,
+    fb_st_pk       VARCHAR2(20),
+    fb_st_date     nVARCHAR2(20),
+    fb_st_time     VARCHAR2(20),
+    fb_st_match    nVARCHAR2(20)    
+);

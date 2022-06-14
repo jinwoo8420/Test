@@ -60,4 +60,130 @@
 		SELECT * FROM tbl_fb_stadium
     		WHERE fb_st_pk ='fb_gangwon2'
 	</select>
+	
+	<select id="selectIncheon" resultType="FootBallScheduleVO">
+		SELECT I.fb_st_date, I.fb_st_time, I.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_incheon I
+		        ON ST.fb_st_pk = I.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_incheon'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Incheon" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_incheon'
+	</select>
+	
+	<select id="selectSeongnam" resultType="FootBallScheduleVO">
+		SELECT SN.fb_st_date, SN.fb_st_time, SN.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_seongnam SN
+		        ON ST.fb_st_pk = SN.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_seongnam'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Seongnam" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_seongnam'
+	</select>
+	
+	<select id="selectSuwon_ss" resultType="FootBallScheduleVO">
+		SELECT SS.fb_st_date, SS.fb_st_time, SS.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_suwon_ss SS
+		        ON ST.fb_st_pk = SS.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_suwon_ss'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Suwon_ss" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_suwon_ss'
+	</select>
+	
+	<select id="selectSuwon" resultType="FootBallScheduleVO">
+		SELECT SU.fb_st_date, SU.fb_st_time, SU.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_suwon SU
+		        ON ST.fb_st_pk = SU.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_suwon'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Suwon" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_suwon'
+	</select>
+	
+	<select id="selectGimcheon" resultType="FootBallScheduleVO">
+		SELECT G.fb_st_date, G.fb_st_time, G.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_gimcheon G
+		        ON ST.fb_st_pk = G.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_gimcheon'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Gimcheon" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_gimcheon'
+	</select>
+	
+	<select id="selectDaegu" resultType="FootBallScheduleVO">
+		SELECT D.fb_st_date, D.fb_st_time, D.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_daegu D
+		        ON ST.fb_st_pk = D.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_daegu'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Daegu" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_daegu'
+	</select>
+	
+	<select id="selectPohang" resultType="FootBallScheduleVO">
+		SELECT P.fb_st_date, P.fb_st_time, P.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_pohang P
+		        ON ST.fb_st_pk = P.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_pohang'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Pohang" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_pohang'
+	</select>
+	
+	<select id="selectUlsan" resultType="FootBallScheduleVO">
+		SELECT U.fb_st_date, U.fb_st_time, U.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_ulsan U
+		        ON ST.fb_st_pk = U.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_ulsan'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Ulsan" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_ulsan'
+	</select>
+	
+	<select id="selectJeju" resultType="FootBallScheduleVO">
+		SELECT JJ.fb_st_date, JJ.fb_st_time, JJ.fb_st_match
+		FROM tbl_fb_stadium ST
+		    LEFT JOIN tbl_fb_schedule_jeju JJ
+		        ON ST.fb_st_pk = JJ.fb_st_pk
+		        WHERE ST.fb_st_pk ='fb_jeju'
+		ORDER BY fb_st_seq
+	</select>
+	
+	<select id="selectSt_Jeju" resultType="FootBallScheduleVO">
+		SELECT * FROM tbl_fb_stadium
+    		WHERE fb_st_pk ='fb_jeju'
+	</select>
 </mapper>

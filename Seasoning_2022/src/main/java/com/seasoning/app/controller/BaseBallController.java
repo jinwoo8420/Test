@@ -8,9 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.seasoning.app.model.BaseBallScheduleVO;
-import com.seasoning.app.model.MapVO;
 import com.seasoning.app.service.BaseBallService;
-import com.seasoning.app.service.MapService;
 
 @RequestMapping(value = "/baseball")
 @Controller
@@ -19,30 +17,43 @@ public class BaseBallController {
 	@Autowired
 	private BaseBallService bbService;
 
-	@Autowired
-	private MapService mapService;
-
 	@RequestMapping(value = { "/", "" })
 	public String home() {
-		return "baseball/bb-dusan";
+		return "baseball/bb-kia";
 	}
 
 	@RequestMapping(value = "/bb-dusan")
 	public String dusan(Model model) {
 
-		List<BaseBallScheduleVO> bblist = bbService.selectJun();
-		List<BaseBallScheduleVO> bblist2 = bbService.selectJul();
-		List<BaseBallScheduleVO> bblist3 = bbService.selectAug();
-		List<BaseBallScheduleVO> bblist4 = bbService.selectSept();
+		List<BaseBallScheduleVO> bblist = bbService.selectDusan();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Dusan();
 
-		List<MapVO> map = mapService.selectAll();
+		model.addAttribute("BB_DUSAN", bblist);
+		model.addAttribute("ST_DUSAN", bbst);
 
-		model.addAttribute("BASEBALL", bblist);
-		model.addAttribute("BASEBALL2", bblist2);
-		model.addAttribute("BASEBALL3", bblist3);
-		model.addAttribute("BASEBALL4", bblist4);
+		return null;
+	}
+	
+	@RequestMapping(value = "/bb-lg")
+	public String lg(Model model) {
+		
+		List<BaseBallScheduleVO> bblist = bbService.selectLg();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Lg();
+		
+		model.addAttribute("BB_LG", bblist);
+		model.addAttribute("ST_LG", bbst);
+		
+		return null;
+	}
+	
+	@RequestMapping(value = "/bb-kia")
+	public String kia(Model model) {
 
-		model.addAttribute("MAP", map);
+		List<BaseBallScheduleVO> bblist = bbService.selectKia();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Kia();
+
+		model.addAttribute("BB_KIA", bblist);
+		model.addAttribute("ST_KIA", bbst);
 
 		return null;
 	}

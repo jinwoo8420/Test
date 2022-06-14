@@ -8,11 +8,11 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Season + ing ㅣ fb-incheon</title>
+<title>Season + ing ㅣ baseball-dusan</title>
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
-<link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css" />
-<link rel="stylesheet"
-	href="${rootPath}/static/css/area-view.css?ver=2022-06-11-012" />
+<link rel="stylesheet" href="${rootPath}/static/css/kbo-box.css?ver=2022-06-14-005" />
+<link rel="stylesheet" href="${rootPath}/static/css/area-view.css" />
+<link rel="stylesheet" href="${rootPath}/static/css/schedule.css" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script
@@ -26,46 +26,52 @@
 	
 	<section>
 		<article>
-			<h1>케이리그</h1>
-			<div id="k-league-box">
+			<h1>KBO</h1>
+			<div id="kbo-box">
 				<div id="korea-map">
 					<img src="${rootPath}/static/images/korea-map.png" />
 				</div>
 
 				<div id="ticket-book">
+					<!-- 경기일정 부분 따로 뺌 -->
+
+					<%--          	<c:forEach items="${MAP}" var="M">
+          	     <div>
+			        <p id="st_x">${M.bb_st_x}</p>
+			        <p id="st_y">${M.bb_st_y}</p>
+			        <p id="st_x">37.51215</p>
+			        <p id="st_y">127.071976</p>
+        		 </div>
+          	</c:forEach> --%>
 					<div style="display: none;">
-						<p id="st_x">37.466131</p>
-						<p id="st_y">126.643035</p>
+						<p id="st_x">37.435139</p>
+						<p id="st_y">126.690806</p>
 					</div>
 
-					<!-- 경기일정 부분 따로 뺌 -->
-					<%@ include file="/WEB-INF/views/football/fb-schedule.jsp"%>
+					<%@ include file="/WEB-INF/views/baseball/bb-schedule.jsp"%>
 				</div>
 
 			</div>
 			
-			<a href="${rootPath}/football/fb-seoul"><div class="map-point seoul">FC 서울</div></a> 
-			<a href="${rootPath}/football/fb-gangwon1"><div class="map-point gangwon1">강원 FC(춘천)</div></a> 
- 			<a href="${rootPath}/football/fb-gangwon2"><div class="map-point gangwon2">강원 FC(강릉)</div></a> 
-			<a href="${rootPath}/football/fb-gimcheon"><div class="map-point gimcheon">김천 상무</div></a> 
-			<a href="${rootPath}/football/fb-daegu"><div class="map-point deagu">대구 FC</div></a> 
-			<a href="${rootPath}/football/fb-seongnam"><div class="map-point seongnam">성남 FC</div></a> 
-			<a href="${rootPath}/football/fb-suwon_ss"><div class="map-point suwon_ss">수원 삼성</div></a>
-			<a href="${rootPath}/football/fb-suwon"><div class="map-point suwon">수원 FC</div></a>
-			<a href="${rootPath}/football/fb-ulsan"><div class="map-point ulsan">울산 현대</div></a> 
-			<a href="${rootPath}/football/fb-incheon"><div class="map-point incheon" style="font-size: 18px; background-color: rgb(0, 24, 65);">인천 UNT</div></a> 
-			<a href="${rootPath}/football/fb-jeonbuk"><div class="map-point jeonbuk">전북 현대</div></a> 
-			<a href="${rootPath}/football/fb-jeju"><div class="map-point jeju">제주 UNT</div></a> 
-			<a href="${rootPath}/football/fb-pohang"><div class="map-point pohang">포항 스틸러스</div></a>
-			
+			<a href="${rootPath}/baseball/bb-dusan"><div class="map-point dusan">두산 베어스</div></a>
+			<a href="${rootPath}/baseball/bb-lg"><div class="map-point lg">LG 트윈스</div></a>
+	        <a href="${rootPath}/baseball/bb-samsung"><div class="map-point samsung">삼성 라이온즈</div></a>
+	        <a href="${rootPath}/baseball/bb-kiwoom"><div class="map-point kiwoom">키움 히어로즈</div></a>
+	        <a href="${rootPath}/baseball/bb-kt"><div class="map-point kt">KT 위즈</div></a>
+	        <a href="${rootPath}/baseball/bb-lotte"><div class="map-point lotte">롯데 자이언츠</div></a>
+	        <a href="${rootPath}/baseball/bb-ssg"><div class="map-point ssg" style="font-size: 18px; background-color: rgb(0, 24, 65);">SSG 랜더스</div></a>
+	        <a href="${rootPath}/baseball/bb-hanwha"><div class="map-point hanwha">한화 이글스</div></a>
+	        <a href="${rootPath}/baseball/bb-kia"><div class="map-point kia">kia 타이거즈</div></a>
+	        <a href="${rootPath}/baseball/bb-nc"><div class="map-point nc">NC 다이노스</div></a>
+	        
 		</article>
 		<article>
 			<h1 id="around-tour-text">주변 관광지</h1>
+
 			<div id="around-tour-box">
 
+				<!-- 카카오 지도 -->
 				<div id="map" style="width: 780px; height: 700px"></div>
-
-
 
 				<div id="tour-list">
 					<div id="choice-tour-menu">
@@ -100,7 +106,6 @@
 			<%@ include file="/WEB-INF/views/popular/popular.jsp"%>
 		</div>
 
-
 	</section>
 	<footer></footer>
 </body>
@@ -108,6 +113,5 @@
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be01097258cdbbe3042dc5464adc574e&libraries=services,clusterer">
 	
 </script>
-<script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-002"></script>
-
+<script src="${rootPath}/static/js/bb_map.js?ver=2022-06-10-011"></script>
 </html>

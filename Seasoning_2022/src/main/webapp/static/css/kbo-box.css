@@ -13,7 +13,7 @@ section > article > h1 {
   font-size: 32px;
   color: rgb(0, 24, 65);
 }
-#k-league-box {
+#kbo-box {
   margin-top: 20px;
   display: flex;
 }
@@ -32,79 +32,62 @@ section > article > h1 {
   background-color: #fff;
 }
 
-.seoul {
+.dusan {
   position: absolute;
   top: 200px;
   left: 170px;
 }
 
-.gangwon1 {
-  position: absolute;
-  top: 190px;
-  left: 280px;
-}
-
-.gangwon2 {
-  position: absolute;
-  top: 240px;
-  left: 400px;
-}
-.gimcheon {
-  position: absolute;
-  top: 450px;
-  left: 260px;
-}
-
-.deagu {
+.samsung {
   position: absolute;
   top: 510px;
   left: 325px;
 }
-.seongnam {
+.lg {
   position: absolute;
   top: 230px;
   left: 255px;
 }
 
-.suwon_ss {
+.kiwoom {
   position: absolute;
   top: 265px;
-  left: 130px;
+  left: 100px;
 }
-.suwon {
+.kt {
   position: absolute;
   top: 270px;
-  left: 230px;
+  left: 220px;
 }
 
-.ulsan {
+.lotte {
   position: absolute;
   top: 560px;
-  left: 420px;
+  left: 440px;
 }
 
-.incheon {
+.ssg {
   position: absolute;
   top: 227px;
   left: 80px;
 }
 
-.jeonbuk {
+.hanwha {
   position: absolute;
-  top: 510px;
-  left: 160px;
+  top: 420px;
+  left: 190px;
 }
 
-.jeju {
+.kia {
   position: absolute;
-  top: 810px;
-  left: 90px;
+  top: 590px;
+  left: 80px;
 }
 
-.pohang {
+.nc {
   position: absolute;
-  top: 510px;
-  left: 440px;
+  top: 570px;
+  left: 325px;
 }
 
 #ticket-link {
