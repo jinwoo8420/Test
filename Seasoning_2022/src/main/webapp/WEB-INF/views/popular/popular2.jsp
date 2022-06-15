@@ -173,93 +173,68 @@
 	<h4 class="attraction">명소 관광지</h4>
 
 	<!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
-	<div class="seoul">
-		<div class="container-view">
-			<div class="attraction-view">
-				<div class="out">
-					<div class="window">
-						<div class="slides">
-							<div class="slide">
-								<c:forEach items="${SEOULtour}" var="SEOULtour">
-									<div class="attr-container">
-										<a href="${rootPath}/detail/fooddetail/${SEOULtour.contentid}" style="color: black">
-											<span class="img"><img src="${SEOULtour.firstimage}"></span> <span>[명소]&nbsp; <b>${SEOULtour.title}</b></span> <span class="content"> <span>${SEOULtour.addr1}</span> <span>${SEOULtour.tel}</span>
-											</span>
-										</a>
-									</div>
-								</c:forEach>
+
+	<div class="container-view seoul">
+		<div class="attraction-view">
+
+			<div class="out">
+				<div class="window">
+					<div class="slides">
+
+						<div class="slide">
+							<div class="attr-container">
+								<span class="img"> <img src="" />
+								</span> <span>[명소]&nbsp; <b>장소</b></span> <span class="content"> </span>
 							</div>
 						</div>
+						<div class="slide">
+							<div class="attr-container">
+								<span class="img"> <img src="" />
+								</span> <span>[명소]&nbsp; <b>장소</b></span> <span class="content"> </span>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="attr-container">
+								<span class="img"> <img src="" />
+								</span> <span>[명소]&nbsp; <b>장소</b></span> <span class="content"> </span>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="attr-container">
+								<span class="img"> <img src="" />
+								</span> <span>[명소]&nbsp; <b>장소</b></span> <span class="content"> </span>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="attr-container">
+								<span class="img"> <img src="" />
+								</span> <span>[명소]&nbsp; <b>장소</b></span> <span class="content"> </span>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="attr-container">
+								<span class="img"> <img src="" />
+								</span> <span>[명소]&nbsp; <b>장소</b></span> <span class="content"> </span>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="attr-container">
+								<span class="img"> <img src="" />
+								</span> <span>[명소]&nbsp; <b>장소</b></span> <span class="content"> </span>
+							</div>
+						</div>
+						<div class="slide">
+							<div class="attr-container">
+								<span class="img"> <img src="" />
+								</span> <span>[명소]&nbsp; <b>장소</b></span> <span class="content"> </span>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
-
-			<div class="btn-box">
-				<button class="btn prev">&#10094;</button>
-				<button class="btn next">&#10095;</button>
-			</div>
-
-
 		</div>
-
-		<h4 class="attraction">맛난 식당</h4>
-		<div class="container-view">
-			<div class="attraction-view">
-				<div class="out">
-					<div class="window">
-						<div class="slides">
-							<div class="slide">
-								<c:forEach items="${SEOULfood}" var="SEOULfood">
-									<div class="attr-container">
-										<a href="${rootPath}/detail/fooddetail/${SEOULfood.contentid}" style="color: black">
-											<span class="img"><img src="${SEOULfood.firstimage}"></span> <span>[식당]&nbsp; <b>${SEOULfood.title}</b></span> <span class="content"> <span>${SEOULfood.addr1}</span> <span>${SEOULfood.tel}</span>
-											</span>
-										</a>
-									</div>
-								</c:forEach>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="btn-box">
-				<button class="btn prev">&#10094;</button>
-				<button class="btn next">&#10095;</button>
-			</div>
-
-		</div>
-
-		<h4 class="attraction">좋은 숙소</h4>
-		<div class="container-view">
-			<div class="attraction-view">
-				<div class="out">
-					<div class="window">
-						<div class="slides">
-							<div class="slide">
-								<c:forEach items="${SEOULlodgment}" var="SEOULlodgment">
-									<div class="attr-container">
-										<a href="${rootPath}/detail/fooddetail/${SEOULlodgment.contentid}" style="color: black">
-											<span class="img"><img src="${SEOULlodgment.firstimage}"></span> <span>[숙박]&nbsp; <b>${SEOULlodgment.title}</b></span> <span class="content"> <span>${SEOULlodgment.addr1}</span> <span>${SEOULlodgment.tel}</span>
-											</span>
-										</a>
-									</div>
-								</c:forEach>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="btn-box">
-			<button class="btn prev">&#10094;</button>
-			<button class="btn next">&#10095;</button>
-		</div>
-		
 	</div>
-
 	<!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
 	<div class="container-view incheon">
 		<div class="attraction-view">
@@ -1277,8 +1252,11 @@
 
 	<!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
 
+	<div class="btn-box">
+		<button class="btn prev">&#10094;</button>
+		<button class="btn next">&#10095;</button>
+	</div>
 
 </div>
-
 
 <script src="${rootPath}/static/js/popular_button.js?ver=2022-06-15-021"></script>

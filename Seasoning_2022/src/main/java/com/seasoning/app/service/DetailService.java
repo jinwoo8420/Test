@@ -1,16 +1,18 @@
 package com.seasoning.app.service;
 
 import java.io.IOException;
-import java.util.List;
 
-import com.seasoning.app.model.FoodVO;
-import com.seasoning.app.model.LodgmentVO;
-import com.seasoning.app.model.TourListVO;
+import com.seasoning.app.model.CommonDetailVO;
+import com.seasoning.app.model.FoodDetailVO;
+import com.seasoning.app.model.LodgmentDetailVO;
+import com.seasoning.app.model.TourDetailVO;
 
 public interface DetailService {
 	
-	public TourListVO getTourDetail() throws IOException;
-	public FoodVO getFoodDetail() throws IOException;
-	public LodgmentVO getLodgmentDetail() throws IOException;
+	public TourDetailVO getTourDetail(String contentId) throws IOException;
+	public FoodDetailVO getFoodDetail(String contentId) throws IOException;
+	public LodgmentDetailVO getLodgmentDetail(String contentId) throws IOException;
+	
+	public CommonDetailVO getCommonDetail(String contentId) throws IOException;
 
 }

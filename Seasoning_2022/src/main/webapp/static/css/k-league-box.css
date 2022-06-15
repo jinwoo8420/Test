@@ -32,76 +32,76 @@ section > article > h1 {
   background-color: #fff;
 }
 
-.seoul {
+#seoul {
   position: absolute;
   top: 200px;
   left: 170px;
 }
 
-.gangwon1 {
+#gangwon1 {
   position: absolute;
   top: 190px;
   left: 280px;
 }
 
-.gangwon2 {
+#gangwon2 {
   position: absolute;
   top: 240px;
   left: 400px;
 }
-.gimcheon {
+#gimcheon {
   position: absolute;
   top: 450px;
   left: 260px;
 }
 
-.deagu {
+#deagu {
   position: absolute;
   top: 510px;
   left: 325px;
 }
-.seongnam {
+#seongnam {
   position: absolute;
   top: 230px;
   left: 255px;
 }
 
-.suwon_ss {
+#suwon_ss {
   position: absolute;
   top: 265px;
   left: 130px;
 }
-.suwon {
+#suwon {
   position: absolute;
   top: 270px;
   left: 230px;
 }
 
-.ulsan {
+#ulsan {
   position: absolute;
   top: 560px;
   left: 420px;
 }
 
-.incheon {
+#incheon {
   position: absolute;
   top: 227px;
   left: 80px;
 }
 
-.jeonbuk {
+#jeonbuk {
   position: absolute;
   top: 510px;
   left: 160px;
 }
 
-.jeju {
+#jeju {
   position: absolute;
   top: 810px;
   left: 90px;
 }
 
-.pohang {
+#pohang {
   position: absolute;
   top: 510px;
   left: 440px;

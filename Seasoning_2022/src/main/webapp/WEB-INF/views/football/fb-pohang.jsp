@@ -10,9 +10,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Season + ing ㅣ fb-pohang</title>
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
-<link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css" />
+<link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css?ver=2022-06-15-001" />
 <link rel="stylesheet"
 	href="${rootPath}/static/css/area-view.css?ver=2022-06-11-012" />
+	<link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-15-002" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script
@@ -44,55 +45,24 @@
 
 			</div>
 			
-			<a href="${rootPath}/football/fb-seoul"><div class="map-point seoul">FC 서울</div></a> 
-			<a href="${rootPath}/football/fb-gangwon1"><div class="map-point gangwon1">강원 FC(춘천)</div></a> 
- 			<a href="${rootPath}/football/fb-gangwon2"><div class="map-point gangwon2">강원 FC(강릉)</div></a> 
-			<a href="${rootPath}/football/fb-gimcheon"><div class="map-point gimcheon">김천 상무</div></a> 
-			<a href="${rootPath}/football/fb-daegu"><div class="map-point deagu">대구 FC</div></a> 
-			<a href="${rootPath}/football/fb-seongnam"><div class="map-point seongnam">성남 FC</div></a> 
-			<a href="${rootPath}/football/fb-suwon_ss"><div class="map-point suwon_ss">수원 삼성</div></a>
-			<a href="${rootPath}/football/fb-suwon"><div class="map-point suwon">수원 FC</div></a>
-			<a href="${rootPath}/football/fb-ulsan"><div class="map-point ulsan">울산 현대</div></a> 
-			<a href="${rootPath}/football/fb-incheon"><div class="map-point incheon">인천 UNT</div></a> 
-			<a href="${rootPath}/football/fb-jeonbuk"><div class="map-point jeonbuk">전북 현대</div></a> 
-			<a href="${rootPath}/football/fb-jeju"><div class="map-point jeju">제주 UNT</div></a> 
-			<a href="${rootPath}/football/fb-pohang"><div class="map-point pohang" style="font-size: 18px; background-color: rgb(0, 24, 65);">포항 스틸러스</div></a>
+			<a href="${rootPath}/football/fb-seoul"><div class="map-point" id="seoul">FC 서울</div></a> 
+			<a href="${rootPath}/football/fb-gangwon1"><div class="map-point" id="gangwon1">강원 FC(춘천)</div></a> 
+ 			<a href="${rootPath}/football/fb-gangwon2"><div class="map-point" id="gangwon2">강원 FC(강릉)</div></a> 
+			<a href="${rootPath}/football/fb-gimcheon"><div class="map-point" id="gimcheon">김천 상무</div></a> 
+			<a href="${rootPath}/football/fb-daegu"><div class="map-point" id="deagu">대구 FC</div></a> 
+			<a href="${rootPath}/football/fb-seongnam"><div class="map-point" id="seongnam">성남 FC</div></a> 
+			<a href="${rootPath}/football/fb-suwon_ss"><div class="map-point" id="suwon_ss">수원 삼성</div></a>
+			<a href="${rootPath}/football/fb-suwon"><div class="map-point" id="suwon">수원 FC</div></a>
+			<a href="${rootPath}/football/fb-ulsan"><div class="map-point" id="ulsan">울산 현대</div></a> 
+			<a href="${rootPath}/football/fb-incheon"><div class="map-point" id="incheon">인천 UNT</div></a> 
+			<a href="${rootPath}/football/fb-jeonbuk"><div class="map-point" id="jeonbuk">전북 현대</div></a> 
+			<a href="${rootPath}/football/fb-jeju"><div class="map-point" id="jeju">제주 UNT</div></a> 
+			<a href="${rootPath}/football/fb-pohang"><div class="map-point" id="pohang" style="font-size: 18px; background-color: rgb(0, 24, 65);">포항 스틸러스</div></a>
 			
 		</article>
 		<article>
 			<h1 id="around-tour-text">주변 관광지</h1>
-			<div id="around-tour-box">
-
-				<div id="map" style="width: 780px; height: 700px"></div>
-
-
-
-				<div id="tour-list">
-					<div id="choice-tour-menu">
-						<a><div id="choice-all">전체</div></a> <a><div>식당</div></a> <a><div>숙박</div></a>
-					</div>
-					<p>
-						총 <span>100</span>개의 결과가 있습니다
-					</p>
-					<div id="list-detail">
-
-						<div class="tour-detail">
-							<div class="detail-img">
-								<img src="" />
-							</div>
-							<div>
-								<p>[숙박]</p>
-								<p></p>
-								<a><div class="detail-watch">
-										</href>
-										자세히 보러가기
-									</div></a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
+			<%@ include file="/WEB-INF/views/kakaoMap/kakaomap.jsp" %>
 		</article>
 
 		<div>
@@ -109,5 +79,6 @@
 	
 </script>
 <script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-002"></script>
+<script src="${rootPath}/static/js/btn.js?var=2022-06-15-001"></script>
 
 </html>
