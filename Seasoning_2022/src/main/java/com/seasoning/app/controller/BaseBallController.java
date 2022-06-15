@@ -58,4 +58,88 @@ public class BaseBallController {
 		return null;
 	}
 
+	@RequestMapping(value = "/bb-ssg")
+	public String ssg(Model model) {
+		
+		List<BaseBallScheduleVO> bblist = bbService.selectSsg();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Ssg();
+		
+		model.addAttribute("BB_SSG", bblist);
+		model.addAttribute("ST_SSG", bbst);
+		
+		return null;
+	}
+
+	@RequestMapping(value = "/bb-kiwoom")
+	public String kiwoom(Model model) {
+		
+		List<BaseBallScheduleVO> bblist = bbService.selectKiwoom();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Kiwoom();
+		
+		model.addAttribute("BB_KIWOOM", bblist);
+		model.addAttribute("ST_KIWOOM", bbst);
+		
+		return null;
+	}
+
+	@RequestMapping(value = "/bb-kt")
+	public String kt(Model model) {
+		
+		List<BaseBallScheduleVO> bblist = bbService.selectKt();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Kt();
+		
+		model.addAttribute("BB_KT", bblist);
+		model.addAttribute("ST_KT", bbst);
+		
+		return null;
+	}
+
+	@RequestMapping(value = "/bb-hanwha")
+	public String hanwha(Model model) {
+		
+		List<BaseBallScheduleVO> bblist = bbService.selectHanwha();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Hanwha();
+		
+		model.addAttribute("BB_HANWHA", bblist);
+		model.addAttribute("ST_HANWHA", bbst);
+		
+		return null;
+	}
+
+	@RequestMapping(value = "/bb-samsung")
+	public String samsung(Model model) {
+		
+		List<BaseBallScheduleVO> bblist = bbService.selectSamsung();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Samsung();
+		
+		model.addAttribute("BB_SAMSUNG", bblist);
+		model.addAttribute("ST_SAMSUNG", bbst);
+		
+		return null;
+	}
+
+	@RequestMapping(value = "/bb-lotte")
+	public String lotte(Model model) {
+		
+		List<BaseBallScheduleVO> bblist = bbService.selectLotte();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Lotte();
+		
+		model.addAttribute("BB_LOTTE", bblist);
+		model.addAttribute("ST_LOTTE", bbst);
+		
+		return null;
+	}
+
+	@RequestMapping(value = "/bb-nc")
+	public String nc(Model model) {
+		
+		List<BaseBallScheduleVO> bblist = bbService.selectNc();
+		List<BaseBallScheduleVO> bbst = bbService.selectSt_Nc();
+		
+		model.addAttribute("BB_NC", bblist);
+		model.addAttribute("ST_NC", bbst);
+		
+		return null;
+	}
+
 }

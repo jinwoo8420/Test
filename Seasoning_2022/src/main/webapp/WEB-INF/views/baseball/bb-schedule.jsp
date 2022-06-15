@@ -25,63 +25,45 @@
 				</p>
 			</c:forEach>
 
-			<c:forEach items="${ST_GANGWON2}" var="GANGWON2">
+			<c:forEach items="${ST_SSG}" var="SSG">
 				<p>
-					<span>${GANGWON2.fb_st_name}</span>
+					<span>${SSG.bb_st_name}</span>
 				</p>
 			</c:forEach>
 
-			<c:forEach items="${ST_INCHEON}" var="INCHEON">
+			<c:forEach items="${ST_KIWOOM}" var="KIWOOM">
 				<p>
-					<span>${INCHEON.fb_st_name}</span>
+					<span>${KIWOOM.bb_st_name}</span>
 				</p>
 			</c:forEach>
 
-			<c:forEach items="${ST_SEONGNAM}" var="SEONGNAM">
+			<c:forEach items="${ST_KT}" var="KT">
 				<p>
-					<span>${SEONGNAM.fb_st_name}</span>
+					<span>${KT.bb_st_name}</span>
 				</p>
 			</c:forEach>
 
-			<c:forEach items="${ST_SUWON_SS}" var="SUWON_SS">
+			<c:forEach items="${ST_HANWHA}" var="HANWHA">
 				<p>
-					<span>${SUWON_SS.fb_st_name}</span>
+					<span>${HANWHA.bb_st_name}</span>
 				</p>
 			</c:forEach>
 
-			<c:forEach items="${ST_SUWON}" var="SUWON">
+			<c:forEach items="${ST_SAMSUNG}" var="SAMSUNG">
 				<p>
-					<span>${SUWON.fb_st_name}</span>
+					<span>${SAMSUNG.bb_st_name}</span>
 				</p>
 			</c:forEach>
 
-			<c:forEach items="${ST_GIMCHEON}" var="GIMCHEON">
+			<c:forEach items="${ST_NC}" var="NC">
 				<p>
-					<span>${GIMCHEON.fb_st_name}</span>
+					<span>${NC.bb_st_name}</span>
 				</p>
 			</c:forEach>
 
-			<c:forEach items="${ST_DAEGU}" var="DAEGU">
+			<c:forEach items="${ST_LOTTE}" var="LOTTE">
 				<p>
-					<span>${DAEGU.fb_st_name}</span>
-				</p>
-			</c:forEach>
-
-			<c:forEach items="${ST_POHANG}" var="POHANG">
-				<p>
-					<span>${POHANG.fb_st_name}</span>
-				</p>
-			</c:forEach>
-
-			<c:forEach items="${ST_ULSAN}" var="ULSAN">
-				<p>
-					<span>${ULSAN.fb_st_name}</span>
-				</p>
-			</c:forEach>
-
-			<c:forEach items="${ST_JEJU}" var="JEJU">
-				<p>
-					<span>${JEJU.fb_st_name}</span>
+					<span>${LOTTE.bb_st_name}</span>
 				</p>
 			</c:forEach>
 		</article>
@@ -98,44 +80,32 @@
 			<img src="${rootPath}/static/images/dusan_lg.jpg" />
 		</c:forEach>
 		
-		<c:forEach items="${ST_GANGWON2}">
-			<img src="${rootPath}/static/images/gangwon2.jpg" />
+		<c:forEach items="${ST_SSG}">
+			<img src="${rootPath}/static/images/ssg.jpg" />
 		</c:forEach>
 		
-		<c:forEach items="${ST_INCHEON}">
-			<img src="${rootPath}/static/images/incheon.jpg" />
+		<c:forEach items="${ST_KIWOOM}">
+			<img src="${rootPath}/static/images/kiwoom.jpg" />
 		</c:forEach>
 		
-		<c:forEach items="${ST_SEONGNAM}">
-			<img src="${rootPath}/static/images/seongnam.jpg" />
+		<c:forEach items="${ST_KT}">
+			<img src="${rootPath}/static/images/kt.jpg" />
 		</c:forEach>
 		
-		<c:forEach items="${ST_SUWON_SS}">
-			<img src="${rootPath}/static/images/suwon_ss.jpg" />
+		<c:forEach items="${ST_HANWHA}">
+			<img src="${rootPath}/static/images/hanwha.jpg" />
 		</c:forEach>
 		
-		<c:forEach items="${ST_SUWON}">
-			<img src="${rootPath}/static/images/suwon.jpg" />
+		<c:forEach items="${ST_SAMSUNG}">
+			<img src="${rootPath}/static/images/samsung.jpg" />
 		</c:forEach>
 		
-		<c:forEach items="${ST_GIMCHEON}">
-			<img src="${rootPath}/static/images/gimcheon.jpg" />
+		<c:forEach items="${ST_NC}">
+			<img src="${rootPath}/static/images/nc.jpg" />
 		</c:forEach>
 		
-		<c:forEach items="${ST_DAEGU}">
-			<img src="${rootPath}/static/images/daegu.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_POHANG}">
-			<img src="${rootPath}/static/images/pohang.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_ULSAN}">
-			<img src="${rootPath}/static/images/ulsan.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_JEJU}">
-			<img src="${rootPath}/static/images/jeju.jpg" />
+		<c:forEach items="${ST_LOTTE}">
+			<img src="${rootPath}/static/images/lotte.jpg" />
 		</c:forEach>
 
 		<div class="month-table">
@@ -166,6 +136,55 @@
 							<tr>
 								<td>${KIA.st_date}</td>
 								<td>${KIA.st_match}</td>
+							</tr>
+						</c:forEach>
+						
+						<c:forEach items="${BB_SSG}" var="SSG">
+							<tr>
+								<td>${SSG.st_date}</td>
+								<td>${SSG.st_match}</td>
+							</tr>
+						</c:forEach>
+						
+						<c:forEach items="${BB_KIWOOM}" var="KIWOOM">
+							<tr>
+								<td>${KIWOOM.st_date}</td>
+								<td>${KIWOOM.st_match}</td>
+							</tr>
+						</c:forEach>
+						
+						<c:forEach items="${BB_KT}" var="KT">
+							<tr>
+								<td>${KT.st_date}</td>
+								<td>${KT.st_match}</td>
+							</tr>
+						</c:forEach>
+						
+						<c:forEach items="${BB_HANWHA}" var="HANWHA">
+							<tr>
+								<td>${HANWHA.st_date}</td>
+								<td>${HANWHA.st_match}</td>
+							</tr>
+						</c:forEach>
+						
+						<c:forEach items="${BB_SAMSUNG}" var="SAMSUNG">
+							<tr>
+								<td>${SAMSUNG.st_date}</td>
+								<td>${SAMSUNG.st_match}</td>
+							</tr>
+						</c:forEach>
+
+						<c:forEach items="${BB_NC}" var="NC">
+							<tr>
+								<td>${NC.st_date}</td>
+								<td>${NC.st_match}</td>
+							</tr>
+						</c:forEach>
+
+						<c:forEach items="${BB_LOTTE}" var="LOTTE">
+							<tr>
+								<td>${LOTTE.st_date}</td>
+								<td>${LOTTE.st_match}</td>
 							</tr>
 						</c:forEach>
 

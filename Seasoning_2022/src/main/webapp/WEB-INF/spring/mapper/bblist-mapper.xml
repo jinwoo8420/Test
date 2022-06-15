@@ -46,5 +46,103 @@
 		SELECT * FROM tbl_bb_stadium
     		WHERE st_pk ='bb_kia'
 	</select>
+	
+	<select id="selectSsg" resultType="BaseBallScheduleVO">		
+		SELECT S.st_date, S.st_match
+		FROM tbl_bb_stadium ST
+		    LEFT JOIN tbl_schedule_ssg S
+		        ON ST.st_pk = S.st_pk
+		        WHERE S.st_pk = 'bb_ssg'
+		ORDER BY st_seq
+	</select>
+	
+	<select id="selectSt_Ssg" resultType="BaseBallScheduleVO">
+		SELECT * FROM tbl_bb_stadium
+    		WHERE st_pk ='bb_ssg'
+	</select>
+	
+	<select id="selectKiwoom" resultType="BaseBallScheduleVO">		
+		SELECT KW.st_date, KW.st_match
+		FROM tbl_bb_stadium ST
+		    LEFT JOIN tbl_schedule_kiwoom KW
+		        ON ST.st_pk = KW.st_pk
+		        WHERE KW.st_pk = 'bb_kiwoom'
+		ORDER BY st_seq
+	</select>
+	
+	<select id="selectSt_Kiwoom" resultType="BaseBallScheduleVO">
+		SELECT * FROM tbl_bb_stadium
+    		WHERE st_pk ='bb_kiwoom'
+	</select>
+	
+	<select id="selectKt" resultType="BaseBallScheduleVO">		
+		SELECT KT.st_date, KT.st_match
+		FROM tbl_bb_stadium ST
+		    LEFT JOIN tbl_schedule_kt KT
+		        ON ST.st_pk = KT.st_pk
+		        WHERE KT.st_pk = 'bb_kt'
+		ORDER BY st_seq
+	</select>
+	
+	<select id="selectSt_Kt" resultType="BaseBallScheduleVO">
+		SELECT * FROM tbl_bb_stadium
+    		WHERE st_pk ='bb_kt'
+	</select>
+	
+	<select id="selectHanwha" resultType="BaseBallScheduleVO">		
+		SELECT H.st_date, H.st_match
+		FROM tbl_bb_stadium ST
+		    LEFT JOIN tbl_schedule_hanwha H
+		        ON ST.st_pk = H.st_pk
+		        WHERE H.st_pk = 'bb_hanwha'
+		ORDER BY st_seq
+	</select>
+	
+	<select id="selectSt_Hanwha" resultType="BaseBallScheduleVO">
+		SELECT * FROM tbl_bb_stadium
+    		WHERE st_pk ='bb_hanwha'
+	</select>
+	
+	<select id="selectSamsung" resultType="BaseBallScheduleVO">		
+		SELECT SS.st_date, SS.st_match
+		FROM tbl_bb_stadium ST
+		    LEFT JOIN tbl_schedule_Samsung SS
+		        ON ST.st_pk = SS.st_pk
+		        WHERE SS.st_pk = 'bb_samsung'
+		ORDER BY st_seq
+	</select>
+	
+	<select id="selectSt_Samsung" resultType="BaseBallScheduleVO">
+		SELECT * FROM tbl_bb_stadium
+    		WHERE st_pk ='bb_samsung'
+	</select>
+	
+	<select id="selectNc" resultType="BaseBallScheduleVO">		
+		SELECT N.st_date, N.st_match
+		FROM tbl_bb_stadium ST
+		    LEFT JOIN tbl_schedule_nc N
+		        ON ST.st_pk = N.st_pk
+		        WHERE N.st_pk = 'bb_nc'
+		ORDER BY st_seq
+	</select>
+	
+	<select id="selectSt_Nc" resultType="BaseBallScheduleVO">
+		SELECT * FROM tbl_bb_stadium
+    		WHERE st_pk ='bb_nc'
+	</select>
+	
+	<select id="selectLotte" resultType="BaseBallScheduleVO">		
+		SELECT LT.st_date, LT.st_match
+		FROM tbl_bb_stadium ST
+		    LEFT JOIN tbl_schedule_lotte LT
+		        ON ST.st_pk = LT.st_pk
+		        WHERE LT.st_pk = 'bb_lotte'
+		ORDER BY st_seq
+	</select>
+	
+	<select id="selectSt_Lotte" resultType="BaseBallScheduleVO">
+		SELECT * FROM tbl_bb_stadium
+    		WHERE st_pk ='bb_lotte'
+	</select>
 
 </mapper>
