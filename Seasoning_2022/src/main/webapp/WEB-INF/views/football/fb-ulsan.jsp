@@ -62,7 +62,24 @@
 		</article>
 		<article>
 			<h1 id="around-tour-text">주변 관광지</h1>
-			<%@ include file="/WEB-INF/views/kakaoMap/kakaomap.jsp" %>
+
+			<div class="map_wrap">
+				<div id="map"></div>
+				<div id="menu_wrap" class="bg_white">
+					<div class="around-tour-button">
+						<form onsubmit="searchPlaces1(); return false;">
+							<button id="keyword1" type="submit" value="울산광역시 남구 문수로 44 맛집">식당</button>
+						</form>
+						<form onsubmit="searchPlaces2(); return false;">
+							<button type="submit" value="울산광역시 남구 문수로 44 숙박" id="keyword2">숙박</button>
+						</form>
+					</div>
+					<hr>
+					<ul id="placesList"></ul>
+					<div id="pagination"></div>
+				</div>
+
+			</div>
 		</article>
 
 		<div>
@@ -75,6 +92,9 @@
 	<footer></footer>
 </body>
 
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be01097258cdbbe3042dc5464adc574e&libraries=services,clusterer">
+	
+</script>
 <script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-002"></script>
 <script src="${rootPath}/static/js/btn.js?var=2022-06-15-001"></script>
 </html>

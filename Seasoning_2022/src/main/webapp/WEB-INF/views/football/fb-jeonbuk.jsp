@@ -63,9 +63,26 @@
 		</article>
 		<article>
 			<h1 id="around-tour-text">주변 관광지</h1>
-			<%@ include file="/WEB-INF/views/kakaoMap/kakaomap.jsp" %>
-		</article>
 
+			<div class="map_wrap">
+				<div id="map"></div>
+				<div id="menu_wrap" class="bg_white">
+					<div class="around-tour-button">
+						<form onsubmit="searchPlaces1(); return false;">
+							<button id="keyword1" type="submit" value="전라북도 전주시 덕진구 기린대로 1055 맛집">식당</button>
+						</form>
+						<form onsubmit="searchPlaces2(); return false;">
+							<button type="submit" value="전라북도 전주시 덕진구 기린대로 1055 숙박" id="keyword2">숙박</button>
+						</form>
+					</div>
+					<hr>
+					<ul id="placesList"></ul>
+					<div id="pagination"></div>
+				</div>
+
+			</div>
+		</article>
+		
 		<div>
 			<!-- 인기 관광지 -->
 			<%@ include file="/WEB-INF/views/popular/popular.jsp"%>

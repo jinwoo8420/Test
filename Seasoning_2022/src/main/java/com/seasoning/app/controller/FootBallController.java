@@ -42,21 +42,30 @@ public class FootBallController {
 
 		List<FootBallScheduleVO> fblist = fbService.selectSeoul();
 		List<FootBallScheduleVO> fbst = fbService.selectSt_Seoul();
-		List<AroundVO> AroundList = aroundService.getAround("126.897243", "37.56823");
+//		List<AroundVO> AroundList = aroundService.getAround("126.897243", "37.56823");
 		// 서울
 		List<LocationVO> SeoulTourList = tourService.get_TourLocation("1");
 		List<LocationVO> SeoulFoodList = foodService.get_FoodLocation("1");
 		List<LocationVO> SeoulLodgmentList = lodgmentService.get_LodgmentLocation("1");
 		
+		List<LocationVO> DeaguTourList = tourService.get_TourLocation("4");
+		List<LocationVO> DeaguFoodList = foodService.get_FoodLocation("4");
+		List<LocationVO> DeaguLodgmentList = lodgmentService.get_LodgmentLocation("4");
+		
 
 		model.addAttribute("FB_SEOUL", fblist);
 		model.addAttribute("ST_SEOUL", fbst);
 		
-		model.addAttribute("SEOULaround",AroundList);
+//		model.addAttribute("SEOULaround",AroundList);
 		//서울
 		model.addAttribute("SEOULtour",SeoulTourList);
 		model.addAttribute("SEOULfood",SeoulFoodList);
 		model.addAttribute("SEOULlodgment",SeoulLodgmentList);
+		
+		model.addAttribute("DAEGUtour",DeaguTourList);
+		model.addAttribute("DAEGUfood",DeaguFoodList);
+		model.addAttribute("DAEGUlodgment",DeaguLodgmentList);
+		
 		return null;
 	}
 
@@ -70,7 +79,7 @@ public class FootBallController {
 		//대구
 		List<LocationVO> DeaguTourList = tourService.get_TourLocation("4");
 		List<LocationVO> DeaguFoodList = foodService.get_FoodLocation("4");
-		List<LocationVO> DeaguLodgmentList = lodgmentService.get_LodgmentLocation("1");
+		List<LocationVO> DeaguLodgmentList = lodgmentService.get_LodgmentLocation("4");
 		
 		model.addAttribute("FB_DAEGU", fblist);
 		model.addAttribute("ST_DAEGU", fbst);

@@ -39,7 +39,6 @@ public class LodgmentLocationServiceImpl2 implements LodgmentLocationService{
 			url += ("&" + URLEncoder.encode("MobileApp","UTF-8") + "=" + URLEncoder.encode("AppTest", "UTF-8")); /*서비스명=어플명*/
 			url += ("&" + URLEncoder.encode("areaCode","UTF-8") + "=" + URLEncoder.encode(areaCode, "UTF-8")); /*지역코드, 시군구코드*/
 			url += ("&" + URLEncoder.encode("arrange","UTF-8") + "=" + URLEncoder.encode("P", "UTF-8")); /*대표이미지 있는 조회순 정렬*/
-			url += ("&" + URLEncoder.encode("contentTypeId","UTF-8") + "=" + URLEncoder.encode("12", "UTF-8")); /*대표이미지 있는 조회순 정렬*/
 			url += ("&" + URLEncoder.encode("contentTypeId","UTF-8") + "=" + URLEncoder.encode("32", "UTF-8")); /*관광지 코드 선택*/
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
