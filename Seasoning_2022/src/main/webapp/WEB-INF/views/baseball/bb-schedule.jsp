@@ -7,12 +7,13 @@
 <section class="schedule-content">
 	<div class="month-container">
 		<article class="sch-title">
+
 			<c:forEach items="${ST_DUSAN}" var="DUSAN">
 				<p>
 					<span>${DUSAN.bb_st_name}</span>
 				</p>
 			</c:forEach>
-			
+
 			<c:forEach items="${ST_LG}" var="LG">
 				<p>
 					<span>${LG.bb_st_name}</span>
@@ -66,47 +67,51 @@
 					<span>${LOTTE.bb_st_name}</span>
 				</p>
 			</c:forEach>
+
+
 		</article>
 
-		<c:forEach items="${ST_DUSAN}">
-			<img src="${rootPath}/static/images/dusan_lg.jpg" />
-		</c:forEach>
+		<c:choose>
+			<c:when test="${LAYOUT=='DUSAN_IMG'}">
+				<img src="${rootPath}/static/images/dusan_lg.jpg" />
+			</c:when>
 
-		<c:forEach items="${ST_KIA}">
-			<img src="${rootPath}/static/images/kia.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_LG}">
-			<img src="${rootPath}/static/images/dusan_lg.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_SSG}">
-			<img src="${rootPath}/static/images/ssg.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_KIWOOM}">
-			<img src="${rootPath}/static/images/kiwoom.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_KT}">
-			<img src="${rootPath}/static/images/kt.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_HANWHA}">
-			<img src="${rootPath}/static/images/hanwha.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_SAMSUNG}">
-			<img src="${rootPath}/static/images/samsung.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_NC}">
-			<img src="${rootPath}/static/images/nc.jpg" />
-		</c:forEach>
-		
-		<c:forEach items="${ST_LOTTE}">
-			<img src="${rootPath}/static/images/lotte.jpg" />
-		</c:forEach>
+			<c:when test="${LAYOUT=='LG_IMG'}">
+				<img src="${rootPath}/static/images/dusan_lg.jpg" />
+			</c:when>
+
+			<c:when test="${LAYOUT=='KIA_IMG'}">
+				<img src="${rootPath}/static/images/kia.jpg" />
+			</c:when>
+
+			<c:when test="${LAYOUT=='SSG_IMG'}">
+				<img src="${rootPath}/static/images/ssg.jpg" />
+			</c:when>
+
+			<c:when test="${LAYOUT=='KIWOOM_IMG'}">
+				<img src="${rootPath}/static/images/kiwoom.jpg" />
+			</c:when>
+
+			<c:when test="${LAYOUT=='KT_IMG'}">
+				<img src="${rootPath}/static/images/kt.jpg" />
+			</c:when>
+
+			<c:when test="${LAYOUT=='HANWHA_IMG'}">
+				<img src="${rootPath}/static/images/hanwha.jpg" />
+			</c:when>
+
+			<c:when test="${LAYOUT=='SAMSUNG_IMG'}">
+				<img src="${rootPath}/static/images/samsung.jpg" />
+			</c:when>
+
+			<c:when test="${LAYOUT=='NC_IMG'}">
+				<img src="${rootPath}/static/images/nc.jpg" />
+			</c:when>
+
+			<c:when test="${LAYOUT=='LOTTE_IMG'}">
+				<img src="${rootPath}/static/images/lotte.jpg" />
+			</c:when>
+		</c:choose>
 
 		<div class="month-table">
 			<article class="table-container">
@@ -131,42 +136,42 @@
 								<td>${LG.st_match}</td>
 							</tr>
 						</c:forEach>
-						
+
 						<c:forEach items="${BB_KIA}" var="KIA">
 							<tr>
 								<td>${KIA.st_date}</td>
 								<td>${KIA.st_match}</td>
 							</tr>
 						</c:forEach>
-						
+
 						<c:forEach items="${BB_SSG}" var="SSG">
 							<tr>
 								<td>${SSG.st_date}</td>
 								<td>${SSG.st_match}</td>
 							</tr>
 						</c:forEach>
-						
+
 						<c:forEach items="${BB_KIWOOM}" var="KIWOOM">
 							<tr>
 								<td>${KIWOOM.st_date}</td>
 								<td>${KIWOOM.st_match}</td>
 							</tr>
 						</c:forEach>
-						
+
 						<c:forEach items="${BB_KT}" var="KT">
 							<tr>
 								<td>${KT.st_date}</td>
 								<td>${KT.st_match}</td>
 							</tr>
 						</c:forEach>
-						
+
 						<c:forEach items="${BB_HANWHA}" var="HANWHA">
 							<tr>
 								<td>${HANWHA.st_date}</td>
 								<td>${HANWHA.st_match}</td>
 							</tr>
 						</c:forEach>
-						
+
 						<c:forEach items="${BB_SAMSUNG}" var="SAMSUNG">
 							<tr>
 								<td>${SAMSUNG.st_date}</td>
@@ -192,57 +197,48 @@
 				</div>
 
 				<div class="ticket-link-con">
-					<c:forEach items="${ST_SEOUL}">
-						<button id="ticket-link" onclick="location.href = 'https://www.fcseoul.com/tickets/reserveSingleTicket'">티켓 예매하러 가기</button>
-					</c:forEach>
+					<c:choose>
+						<c:when test="${LAYOUT=='DUSAN_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'https://www.doosanbears.com/season/ticket'">티켓 예매하러 가기</button>
+						</c:when>
 
-					<c:forEach items="${ST_JEONBUK}">
-						<button id="ticket-link" onclick="location.href = 'https://www.hyundai-motorsfc.com/ticket/ticket.asp'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_ULSAN}">
-						<button id="ticket-link" onclick="location.href = 'https://www.uhfc.tv/apply/ticket.php'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_GANGWON1}">
-						<button id="ticket-link" onclick="location.href = 'https://gangwon-fc.com/match/stadium_songam'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_GANGWON2}">
-						<button id="ticket-link" onclick="location.href = 'https://gangwon-fc.com/match/stadium_gangneung'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_INCHEON}">
-						<button id="ticket-link" onclick="location.href = 'https://www.incheonutd.com/ticket/ticket_intro.php'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_SEONGNAM}">
-						<button id="ticket-link" onclick="location.href = 'https://www.seongnamfc.com/fan/ticket'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_SUWON_SS}">
-						<button id="ticket-link" onclick="location.href = 'https://ticket.interpark.com/Contents/Sports/GoodsInfo?SportsCode=07002&TeamCode=PS003'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_SUWON}">
-						<button id="ticket-link" onclick="location.href = 'https://suwonfc.com/?p=19'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_GIMCHEON}">
-						<button id="ticket-link" onclick="location.href = 'http://gimcheonfc.com/doc/ticket1.php'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_DAEGU}">
-						<button id="ticket-link" onclick="location.href = 'https://www.daegufc.co.kr/match/ticket.php'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_POHANG}">
-						<button id="ticket-link" onclick="location.href = 'https://www.steelers.co.kr/match/ticket'">티켓 예매하러 가기</button>
-					</c:forEach>
-					
-					<c:forEach items="${ST_JEJU}">
-						<button id="ticket-link" onclick="location.href = 'https://www.jeju-utd.com/match/ticket.asp'">티켓 예매하러 가기</button>
-					</c:forEach>
+						<c:when test="${LAYOUT=='LG_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'https://www.lgtwins.com/service/html.ncd?view=/pc_twins/ticket/ticketinfo'">티켓 예매하러 가기</button>
+						</c:when>
+
+						<c:when test="${LAYOUT=='KIA_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'https://tigers.co.kr/ticket/reservation'">티켓 예매하러 가기</button>
+						</c:when>
+
+						<c:when test="${LAYOUT=='SSG_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'http://www.ssglanders.com/game/ticket'">티켓 예매하러 가기</button>
+						</c:when>
+
+						<c:when test="${LAYOUT=='KT_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'https://www.ktwiz.co.kr/ticket/reservation'">티켓 예매하러 가기</button>
+						</c:when>
+
+						<c:when test="${LAYOUT=='HANWHA_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'https://www.hanwhaeagles.co.kr/ticketInfo.do'">티켓 예매하러 가기</button>
+						</c:when>
+
+						<c:when test="${LAYOUT=='KIWOOM_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'https://www.heroesbaseball.co.kr/ticket/normal/viewCharge.do'">티켓 예매하러 가기</button>
+						</c:when>
+
+						<c:when test="${LAYOUT=='NC_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'https://www.ncdinos.com/auth/ticket.do'">티켓 예매하러 가기</button>
+						</c:when>
+
+						<c:when test="${LAYOUT=='SAMSUNG_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'https://www.samsunglions.com/score/score_4_7.asp'">티켓 예매하러 가기</button>
+						</c:when>
+
+						<c:when test="${LAYOUT=='LOTTE_IMG'}">
+							<button id="ticket-link" onclick="location.href = 'http://www.giantsclub.com/html/?pcode=339'">티켓 예매하러 가기</button>
+						</c:when>
+
+					</c:choose>
 				</div>
 
 			</article>

@@ -30,6 +30,7 @@ public class BaseBallController {
 
 		model.addAttribute("BB_DUSAN", bblist);
 		model.addAttribute("ST_DUSAN", bbst);
+		model.addAttribute("LAYOUT", "DUSAN_IMG");
 
 		return null;
 	}
@@ -42,6 +43,7 @@ public class BaseBallController {
 		
 		model.addAttribute("BB_LG", bblist);
 		model.addAttribute("ST_LG", bbst);
+		model.addAttribute("LAYOUT", "LG_IMG");
 		
 		return null;
 	}
@@ -54,6 +56,7 @@ public class BaseBallController {
 
 		model.addAttribute("BB_KIA", bblist);
 		model.addAttribute("ST_KIA", bbst);
+		model.addAttribute("LAYOUT", "KIA_IMG");
 
 		return null;
 	}
@@ -66,6 +69,7 @@ public class BaseBallController {
 		
 		model.addAttribute("BB_SSG", bblist);
 		model.addAttribute("ST_SSG", bbst);
+		model.addAttribute("LAYOUT", "SSG_IMG");
 		
 		return null;
 	}
@@ -78,6 +82,7 @@ public class BaseBallController {
 		
 		model.addAttribute("BB_KIWOOM", bblist);
 		model.addAttribute("ST_KIWOOM", bbst);
+		model.addAttribute("LAYOUT", "KIWOOM_IMG");
 		
 		return null;
 	}
@@ -90,6 +95,7 @@ public class BaseBallController {
 		
 		model.addAttribute("BB_KT", bblist);
 		model.addAttribute("ST_KT", bbst);
+		model.addAttribute("LAYOUT", "KT_IMG");
 		
 		return null;
 	}
@@ -102,6 +108,7 @@ public class BaseBallController {
 		
 		model.addAttribute("BB_HANWHA", bblist);
 		model.addAttribute("ST_HANWHA", bbst);
+		model.addAttribute("LAYOUT", "HANWHA_IMG");
 		
 		return null;
 	}
@@ -114,6 +121,7 @@ public class BaseBallController {
 		
 		model.addAttribute("BB_SAMSUNG", bblist);
 		model.addAttribute("ST_SAMSUNG", bbst);
+		model.addAttribute("LAYOUT", "SAMSUNG_IMG");
 		
 		return null;
 	}
@@ -126,6 +134,7 @@ public class BaseBallController {
 		
 		model.addAttribute("BB_LOTTE", bblist);
 		model.addAttribute("ST_LOTTE", bbst);
+		model.addAttribute("LAYOUT", "LOTTE_IMG");
 		
 		return null;
 	}
@@ -138,6 +147,7 @@ public class BaseBallController {
 		
 		model.addAttribute("BB_NC", bblist);
 		model.addAttribute("ST_NC", bbst);
+		model.addAttribute("LAYOUT", "NC_IMG");
 		
 		return null;
 	}

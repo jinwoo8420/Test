@@ -14,17 +14,17 @@ onpopstate = function (e) {
     url: history.state.path,
     data: { type: "get" },
     success: function (data) {
-      var bodyData =
-        data.substring(
-          data.indexOf("<!--body start-->"),
-          data.indexOf("<!--body end-->")
-        ) + " ";
+      // var bodyData =
+      //   data.substring(
+      //     data.indexOf("<!--body start-->"),
+      //     data.indexOf("<!--body end-->")
+      //   ) + " ";
       // " " +
       // data.substring(
       //   data.indexOf("<!--js start-->"),
       //   data.indexOf("<!--js end-->")
       // );
-      $("#fb_section").html(data);
+      $(".fb_section").html(data);
     },
   });
 };
