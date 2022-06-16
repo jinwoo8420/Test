@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="${rootPath}/static/css/kbo-box.css?ver=2022-06-14-005" />
 <link rel="stylesheet" href="${rootPath}/static/css/area-view.css" />
 <link rel="stylesheet" href="${rootPath}/static/css/schedule.css" />
+<link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-15-002" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script
@@ -59,38 +60,25 @@
 		</article>
 		<article>
 			<h1 id="around-tour-text">주변 관광지</h1>
-
-			<div id="around-tour-box">
-
-				<!-- 카카오 지도 -->
-				<div id="map" style="width: 780px; height: 700px"></div>
-
-				<div id="tour-list">
-					<div id="choice-tour-menu">
-						<a><div id="choice-all">전체</div></a> <a><div>식당</div></a> <a><div>숙박</div></a>
+			<div class="map_wrap">
+				<div id="map"></div>
+				<div id="menu_wrap" class="bg_white">
+					<div class="around-tour-button">
+						<form onsubmit="searchPlaces1(); return false;">
+							<button id="keyword1" type="submit" value="창원 마산야구장  맛집">식당</button>
+						</form>
+						<form onsubmit="searchPlaces2(); return false;">
+							<button type="submit" value="창원 마산야구장  숙박" id="keyword2">숙박</button>
+						</form>
 					</div>
-					<p>
-						총 <span>100</span>개의 결과가 있습니다
-					</p>
-					<div id="list-detail">
-
-						<div class="tour-detail">
-							<div class="detail-img">
-								<img src="" />
-							</div>
-							<div>
-								<p>[숙박]</p>
-								<p></p>
-								<a><div class="detail-watch">
-										</href>
-										자세히 보러가기
-									</div></a>
-							</div>
-						</div>
-
-					</div>
+					<hr>
+					<ul id="placesList"></ul>
+					<div id="pagination"></div>
 				</div>
+
 			</div>
+
+			
 		</article>
 
 		<div>
@@ -105,5 +93,7 @@
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be01097258cdbbe3042dc5464adc574e&libraries=services,clusterer">
 	
 </script>
-<script src="${rootPath}/static/js/bb_map.js?ver=2022-06-10-011"></script>
+
+<script src="${rootPath}/static/js/bb_map.js?ver=2022-06-16-001"></script>
+<script src="${rootPath}/static/js/btn.js?var=2022-06-15-001"></script>
 </html>

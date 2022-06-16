@@ -11,9 +11,7 @@
 <title>Season + ing ㅣ fb-ulsan</title>
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
 <link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css?ver=2022-06-15-001" />
-<link rel="stylesheet"
-	href="${rootPath}/static/css/area-view.css?ver=2022-06-11-012" />
-	<link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-15-002" />
+<link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-15-002" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script

@@ -6,20 +6,9 @@ var mapContainer = document.getElementById("map");
 var latlngyo = new kakao.maps.LatLng(st_x, st_y); // 좌표값 지도변수에 담기
 var mapOption = {
   center: latlngyo, // 지도의 중심좌표지정
-  level: 1, // 지도의 확대 레벨 지정
+  level: 6, // 지도의 확대 레벨 지정
 };
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성
-var circle = new kakao.maps.Circle({
-  map: map,
-  center: latlngyo,
-  radius: 3000,
-  strokeWeight: 5,
-  strokeColor: "#ff1100",
-  strokeOpacity: 0.8,
-  strokeStyle: "solid",
-  fillColor: "#ffd2cf",
-  fillOpacity: 0.3,
-}); // 지도 반경의 원 생성
 var marker = new kakao.maps.Marker({
   position: latlngyo, // 마커의 좌표
   map: map, // 마커를 표시할 지도 객체

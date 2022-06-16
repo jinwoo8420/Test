@@ -10,7 +10,6 @@
 <title>Season + ing ㅣ fb-seoul</title>
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
 <link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css?ver=2022-06-15-001" />
-<link rel="stylesheet" href="${rootPath}/static/css/area-view.css?ver=2022-06-11-014" />
 <link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-15-002" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -89,11 +88,51 @@
 			<%@ include file="/WEB-INF/views/kakaoMap/kakaomap.jsp"%>
 		</article>
 
-		<div>
-			<!-- 인기 관광지 -->
-			<%@ include file="/WEB-INF/views/popular/popular.jsp"%>
-		</div>
+		<script src="${rootPath}/static/js/popular_silde.js?ver=2022-06-11-003"></script>
+		<link rel="stylesheet" href="${rootPath}/static/css/popular_view.css?ver=2022-06-16-006" />
+		<link rel="stylesheet" href="${rootPath}/static/css/area-view.css?ver20220616001" />
+		<script>
+			const rootPath = "${rootPath}"
+		</script>
+		
 
+
+		<div>
+				<!-- 지역별 관광지 부분 -->
+	<h4 class="view-title">지역별 관광지</h4>
+	<div class="area-view">
+		<div class="area-container">
+			<div class="area-menu">
+				<button class="area-btn seoul_btn clicked"  type="button">서울</button>
+				<button class="area-btn incheon_btn" type="button"  
+							data-tour_location="2" data-food_location="2" data-lodgment_location="2">인천</button>
+							
+				<button class="area-btn daejeon_btn" type="button"
+							data-tour_location="3" data-food_location="3" data-lodgment_location="3">대전</button>
+							
+				<button class="area-btn daegu_btn" type="button"
+						data-tour_location="4" data-food_location="4" data-lodgment_location="4">대구</button>
+				<button class="area-btn gwangju_btn" type="button">광주</button>
+				<button class="area-btn busan_btn" type="button">부산</button>
+				<button class="area-btn ulsan_btn" type="button">울산</button>
+				<button class="area-btn sejong_btn" type="button">세종</button>
+				<button class="area-btn gyeonggi_btn" type="button">경기</button>
+				<button class="area-btn gangwon_btn" type="button">강원</button>
+				<button class="area-btn chungbuk_btn" type="button">충북</button>
+				<button class="area-btn chungnam_btn" type="button">충남</button>
+				<button class="area-btn gyeongbuk_btn" type="button">경북</button>
+				<button class="area-btn gyeongnam_btn" type="button">경남</button>
+				<button class="area-btn jeonbuk_btn" type="button">전북</button>
+				<button class="area-btn jeonnam_btn" type="button">전남</button>
+				<button class="area-btn jeju_btn" type="button">제주</button>
+			</div>
+		</div>
+	</div>
+			
+		
+			<div class="popular_view">
+			</div>
+		</div>
 
 	</section>
 	<!--body end-->
@@ -103,5 +142,6 @@
 
 <script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-002"></script>
 <script src="${rootPath}/static/js/btn.js?var=2022-06-15-001"></script>
+		<script src="${rootPath}/static/js/popular_button.js?ver=2022-06-15-022"></script>
 
 </html>

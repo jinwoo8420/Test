@@ -17,7 +17,7 @@
 </script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
-<%-- <script src="${rootPath}/static/js/detail.js?ver220615-007"></script> --%>
+<script src="${rootPath}/static/js/detail.js?ver220616-003"></script>
 
 <style>
 body {
@@ -39,7 +39,8 @@ section {
 	border-bottom: 2px red solid;
 }
 
-.hj-detail-titlebox h1, .hj-detail-titlebox a, .hj-detail-titlebox div {
+
+.hj-detail-titlebox a, .hj-detail-titlebox div {
 	width: 150px;
 }
 
@@ -61,15 +62,24 @@ text-align: center;
 }
 
 .hj-detail-main table {
-border: 1px solid black;
+ border: 1px solid #ddd;
 border-collapse: collapse;
 width : 88%;
 margin : 20px auto ;
 
 }
 
+
+.hj-detail-main table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+color : black;
+}
+/* .hj-detail-main table td:nth-child(odd) { */
+/*   background-color: #f2f2f2; */
+/* } */
+
 .hj-detail-main table th, .hj-detail-main table td {
-border: 1px solid black;
+/*   border: 1px solid #ddd; */
 padding : 16px;
 }
 
@@ -85,6 +95,7 @@ width: 88%;
 }
 
 .hj-detail-other a {
+cursor : pointer;
 	width: 30px;
 	height: 50px;
 	text-align: center;
@@ -95,6 +106,11 @@ width: 88%;
 	line-height: 50px;
 	background-color: #eee;
 	margin-top: 30px;
+}
+
+.hj-detail-other a:hover {
+background-color: black;
+color: #eee;
 }
 
 .hj-detail-otherbox {
@@ -151,15 +167,15 @@ width: 88%;
 				<table>
 					<tr>
 						<th>주소</th>
-						<th>${COMMONDETAIL.addr1}</th>
+						<td>${COMMONDETAIL.addr1}</td>
 					</tr>
 					<tr>
 						<th>전화번호</th>
-						<th>${COMMONDETAIL.tel}</th>
+						<td>${COMMONDETAIL.tel}</td>
 					</tr>
 					<tr>
 						<th>홈페이지주소</th>
-						<th>${COMMONDETAIL.homepage}</th>
+						<td>${COMMONDETAIL.homepage}</td>
 					</tr>
 					<tr>
 						<td colspan='2'>${COMMONDETAIL.overview}</td>
