@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const div_menu = document.querySelector("div.area-menu");
   const div_pop_view = document.querySelector("div.popular_view");
+  const div_btn = document.querySelector("div.btn-box");
+
+  const SLIDE_WIDTH = 1200;
+
+  let position = 0;
+  let curPosition = 0;
 
   const getPopular = (tour_location, food_location, lodgment_location) => {
     fetch(
@@ -20,10 +26,77 @@ document.addEventListener("DOMContentLoaded", () => {
       const tour_location = button.dataset.tour_location;
       const food_location = button.dataset.food_location;
       const lodgment_location = button.dataset.lodgment_location;
+
       console.log(tour_location, food_location, lodgment_location);
       getPopular(tour_location, food_location, lodgment_location);
     }
   });
+  div_pop_view?.addEventListener("click", (e) => {
+    const button = e.target;
+    if (button.tagName === "BUTTON") {
+      const slides = button
+        .closest("div.container-view")
+        .querySelector("div.slides"); // document.querySelector("div.slides");
+
+      const sldCount = slides.querySelectorAll("img").length;
+      console.log("Count", sldCount);
+
+      if (button.className === "btn prev") {
+        console.log("프리 btn");
+        if (curPosition > 0) {
+          console.log("Current", curPosition);
+          position += SLIDE_WIDTH;
+          slides.style.transform = `translateX(${position}px)`;
+          slides.style.transition = `${0.8}s ease-out`;
+          curPosition--;
+        }
+      }
+      if (button.className === "btn next") {
+        console.log("넥스트 btn");
+        if (curPosition <= sldCount * 2) {
+          console.log("Pos", position);
+          position -= SLIDE_WIDTH;
+          slides.style.transform = `translateX(${position}px)`;
+          slides.style.transition = `${0.8}s ease-out`;
+          curPosition++;
+        }
+      }
+    }
+  });
+
+  // div_btn?.addEventListener("click", (e) => {
+  //   console.log("얖");
+  //   const slide_button = e.target;
+  //   if (slide_button.tagName === "BUTTON") {
+  //     const prevBtn = document.querySelector("button.prev");
+  //     const nextBtn = document.querySelector("button.next");
+  //     const slides = document.querySelector("div.slides");
+  //     const sldCount = document.querySelectorAll("div.slides div").length;
+
+  //     if (prevBtn) {
+  //       prevBtn.addEventListener("click", () => {
+  //         console.log("프리 btn");
+  //         if (curPosition > 0) {
+  //           position += SLIDE_WIDTH;
+  //           slides.style.transform = `translateX(${position}px)`;
+  //           slides.style.transition = `${0.8}s ease-out`;
+  //           curPosition--;
+  //         }
+  //       });
+  //     }
+  //     if (nextBtn) {
+  //       nextBtn.addEventListener("click", () => {
+  //         console.log("넥스트 btn");
+  //         if (curPosition <= sldCount - 16) {
+  //           position -= SLIDE_WIDTH;
+  //           slides.style.transform = `translateX(${position}px)`;
+  //           slides.style.transition = `${0.8}s ease-out`;
+  //           curPosition++;
+  //         }
+  //       });
+  //     }
+  //   }
+  // });
 
   /* 버튼 색상 변경 */
   var btns = document.getElementsByClassName("area-btn");

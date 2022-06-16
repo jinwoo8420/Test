@@ -122,7 +122,6 @@
 				</div>
 			</div>
 
-
 			<script>
 				const rootPath = "${rootPath}"
 			</script>
@@ -138,7 +137,7 @@
 
 <script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-002"></script>
 <script src="${rootPath}/static/js/btn.js?var=2022-06-15-001"></script>
-<script src="${rootPath}/static/js/popular_button.js?ver=2022-06-15-023"></script>
+<script src="${rootPath}/static/js/popular_button.js?ver=2022-06-16-028"></script>
 
 
 </html>

@@ -150,7 +150,7 @@
 		</div>
 	</div>
 			
-		<script src="${rootPath}/static/js/popular_silde.js?ver=2022-06-11-003"></script>
+		
 		<link rel="stylesheet" href="${rootPath}/static/css/popular_view.css?ver=2022-06-16-006" />
 		<link rel="stylesheet" href="${rootPath}/static/css/area-view.css?ver20220616004" />
 		<script>
