@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.seasoning.app.model.AroundVO;
@@ -32,9 +33,26 @@ public class BaseBallController {
 	@Autowired
 	private LodgmentLocationService lodgmentService;
 
-	@RequestMapping(value = { "/", "" })
-	public String home() {
-		return "baseball/bb-kia";
+//	@RequestMapping(value = { "/", "" })
+//	public String home() {
+//		return "baseball/bb-kia";
+//	}
+	
+	@RequestMapping(value = "/get/{tour_location}/{food_location}/{lodgment_location}")
+	public String seoul(
+			@PathVariable("tour_location") String tour,
+			@PathVariable("food_location") String food,
+			@PathVariable("lodgment_location") String lodgment, 
+			Model model) throws IOException {
+		
+		List<LocationVO> tourList = tourService.get_TourLocation(tour);
+		List<LocationVO> foodList = foodService.get_FoodLocation(food);
+		List<LocationVO> lodgmentList = lodgmentService.get_LodgmentLocation(lodgment);
+
+		model.addAttribute("TOURS",tourList);
+		model.addAttribute("FOODS",foodList);
+		model.addAttribute("LODGMENTS",lodgmentList);
+		return "/popular/popular";
 	}
 
 	@RequestMapping(value = "/bb-dusan")
@@ -44,20 +62,20 @@ public class BaseBallController {
 		List<BaseBallScheduleVO> bbst = bbService.selectSt_Dusan();
 		List<AroundVO> AroundList = aroundService.getAround("127.071976", "37.51215");
 
-		// 서울
-		List<LocationVO> SeoulTourList = tourService.get_TourLocation("1");
-		List<LocationVO> SeoulFoodList = foodService.get_FoodLocation("1");
-		List<LocationVO> SeoulLodgmentList = lodgmentService.get_LodgmentLocation("1");
-		
+//		// 서울
+//		List<LocationVO> SeoulTourList = tourService.get_TourLocation("1");
+//		List<LocationVO> SeoulFoodList = foodService.get_FoodLocation("1");
+//		List<LocationVO> SeoulLodgmentList = lodgmentService.get_LodgmentLocation("1");
+//		
 
 		model.addAttribute("BB_DUSAN", bblist);
 		model.addAttribute("ST_DUSAN", bbst);
 		model.addAttribute("LAYOUT", "DUSAN_IMG");
 		model.addAttribute("SEOULaround",AroundList);
 		//서울
-		model.addAttribute("SEOULtour",SeoulTourList);
-		model.addAttribute("SEOULfood",SeoulFoodList);
-		model.addAttribute("SEOULlodgment",SeoulLodgmentList);
+//		model.addAttribute("SEOULtour",SeoulTourList);
+//		model.addAttribute("SEOULfood",SeoulFoodList);
+//		model.addAttribute("SEOULlodgment",SeoulLodgmentList);
 
 		return null;
 	}

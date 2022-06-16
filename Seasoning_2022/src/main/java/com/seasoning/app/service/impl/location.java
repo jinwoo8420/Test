@@ -15,6 +15,7 @@ import org.json.XML;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.seasoning.app.config.QualifierConfig;
 import com.seasoning.app.model.LocationVO;
 import com.seasoning.app.model.TourListVO;
 
@@ -27,7 +28,7 @@ public class location {
 		//공공데이터 키값하고 원하는 설정 연결하기
 			String url ="http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailIntro"; /*URL*/
 			try {
-				url += ("?" + URLEncoder.encode("serviceKey","UTF-8") + "=gYKS7rrYVhnUEp3XTlvwEoDEMXL5foa3kM5B%2Fr0zeetiGTYyg4ZERj%2BiR6rPlEZji5q%2FeIlnRmkMTJT6XHn9Ow%3D%3D");
+				url += ("?" + URLEncoder.encode("serviceKey","UTF-8") + "=" + QualifierConfig.KEY_1);
 				url += ("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("10", "UTF-8")); /*한 페이지 결과수 이거 필수값 아님 없애도 됨*/
 				url += ("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*현재 페이지 번호 이거 필수값 아님 없애도 됨*/
 				url +=  ("&" + URLEncoder.encode("MobileOS","UTF-8") + "=" + URLEncoder.encode("ETC", "UTF-8")); /*IOS (아이폰), AND (안드로이드), WIN (원도우폰), ETC*/

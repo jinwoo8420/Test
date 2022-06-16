@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getPopular = (tour_location, food_location, lodgment_location) => {
     fetch(
-      `${rootPath}/football/get/${tour_location}/${food_location}/${lodgment_location}`
+      `${rootPath}/baseball/get/${tour_location}/${food_location}/${lodgment_location}`
     )
       .then((res) => res.text())
       .then((result) => {
