@@ -10,10 +10,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Season + ing ㅣ baseball-dusan</title>
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
-<link rel="stylesheet" href="${rootPath}/static/css/kbo-box.css?ver=2022-06-14-005" />
-<link rel="stylesheet" href="${rootPath}/static/css/area-view.css" />
-<link rel="stylesheet" href="${rootPath}/static/css/schedule.css" />
-<link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-15-002" />
+<link rel="stylesheet" href="${rootPath}/static/css/kbo-box.css?ver=2022-06-17-001" />
+<link rel="stylesheet" href="${rootPath}/static/css/area-view.css?ver=2022-06-17-001" />
+<link rel="stylesheet" href="${rootPath}/static/css/schedule.css?ver=2022-06-17-001" />
+<link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-17-001" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script
@@ -81,7 +81,7 @@
 		</article>
 
 		<div>
-			<!-- 지역별 관광지 부분 -->
+	<!-- 지역별 관광지 부분 -->
 	<h4 class="view-title">지역별 관광지</h4>
 	<div class="area-view">
 		<div class="area-container">
@@ -145,7 +145,7 @@
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be01097258cdbbe3042dc5464adc574e&libraries=services,clusterer">
 	
 </script>
-<script src="${rootPath}/static/js/bb_map.js?ver=2022-06-16-001"></script>
-<script src="${rootPath}/static/js/btn.js?var=2022-06-16-001"></script>
-<script src="${rootPath}/static/js/bb_popular_button.js?ver=2022-06-16-002"></script>
+<script src="${rootPath}/static/js/bb_map.js?ver=2022-06-17-001"></script>
+<script src="${rootPath}/static/js/btn.js?var=2022-06-17-001"></script>
+<script src="${rootPath}/static/js/bb_popular_button.js?ver=2022-06-17-001"></script>
 </html>

@@ -24,7 +24,7 @@ public class LodgmentVO {
 	public String foodplace;
 	public String goodstay;
 	public String hanok;
-	public String infocenterlodginging;
+	public String infocenterlodging;
 	public String parkinglodging;
 	public String pickup;
 	public String roomcount;

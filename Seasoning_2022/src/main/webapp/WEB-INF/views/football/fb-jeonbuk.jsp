@@ -9,11 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Season + ing ㅣ fb-jeonbuk</title>
-<link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
-<link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css?ver=2022-06-15-001" />
-<link rel="stylesheet"
-	href="${rootPath}/static/css/area-view.css?ver=2022-06-11-012" />
-	<link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-15-002" />
+<link rel="stylesheet" href="${rootPath}/static/css/nav.css?ver=2022-06-17-001" />
+<link rel="stylesheet" href="${rootPath}/static/css/k-league-box.css?ver=2022-06-17-001" />
+<link rel="stylesheet"	href="${rootPath}/static/css/area-view.css?ver=2022-06-17-001" />
+<link rel="stylesheet" href="${rootPath}/static/css/kakao_map.css?ver=2022-06-17-001" />
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -147,8 +146,8 @@
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=be01097258cdbbe3042dc5464adc574e&libraries=services,clusterer">
 </script>
 
-<script src="${rootPath}/static/js/fb_map.js?ver=2022-06-10-002"></script>
-<script src="${rootPath}/static/js/btn.js?var=2022-06-15-001"></script>
-<script src="${rootPath}/static/js/popular_button.js?ver=2022-06-15-023"></script>
+<script src="${rootPath}/static/js/fb_map.js?ver=2022-06-17-001"></script>
+<script src="${rootPath}/static/js/btn.js?ver=2022-06-17-001"></script>
+<script src="${rootPath}/static/js/popular_button.js?ver=2022-06-17-001"></script>
 
 </html>

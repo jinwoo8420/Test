@@ -86,17 +86,20 @@ div.slide {
 div.attr-container {
   align-items: flex-start;
   width: 300px;
-  display: flex;
   flex-direction: column;
   padding: 0.5em 1em;
 }
 
 div.attr-container span {
   text-align: left;
-  display: flex;
+  display: block;
   letter-spacing: -0.05em;
   padding: 0.25em;
-  justify-content: center;
+  flex-wrap: wrap;
+  word-break: break-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 div.attr-container span:nth-of-type(1) {
   align-items: center;
@@ -123,6 +126,11 @@ button {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+button.btn:hover {
+  color: #fff;
+  background-color: #444;
 }
 
 div.btn-box {

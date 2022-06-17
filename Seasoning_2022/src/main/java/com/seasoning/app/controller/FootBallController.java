@@ -60,6 +60,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_SEOUL", fblist);
 		model.addAttribute("ST_SEOUL", fbst);
+		model.addAttribute("LAYOUT", "SEOUL_IMG");
 		
 		model.addAttribute("SEOULaround",AroundList);
 		
@@ -77,6 +78,7 @@ public class FootBallController {
 		
 		model.addAttribute("FB_DAEGU", fblist);
 		model.addAttribute("ST_DAEGU", fbst);
+		model.addAttribute("LAYOUT", "DAEGU_IMG");
 		
 		model.addAttribute("DEAGUAROUND",AroundList);
 		
@@ -92,6 +94,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_GANGWON1", fblist);
 		model.addAttribute("ST_GANGWON1", fbst);
+		model.addAttribute("LAYOUT", "DAEGU_IMG");
 		
 		model.addAttribute("GANGWON1ROUND",AroundList);
 
@@ -107,6 +110,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_GANGWON2", fblist);
 		model.addAttribute("ST_GANGWON2", fbst);
+		model.addAttribute("LAYOUT", "DAEGU_IMG");
 		
 		model.addAttribute("GANGWON2ROUND",AroundList);
 
@@ -123,6 +127,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_GIMCHEON", fblist);
 		model.addAttribute("ST_GIMCHEON", fbst);
+		model.addAttribute("LAYOUT", "DAEGU_IMG");
 		
 		model.addAttribute("GIMCHEONAROUND",AroundList);
 
@@ -138,6 +143,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_INCHEON", fblist);
 		model.addAttribute("ST_INCHEON", fbst);
+		model.addAttribute("LAYOUT", "INCHEON_IMG");
 		
 		model.addAttribute("INCHEONAROUND",AroundList);
 		return null;
@@ -150,18 +156,19 @@ public class FootBallController {
 		List<FootBallScheduleVO> fbst = fbService.selectSt_Jeju();
 		List<AroundVO> AroundList = aroundService.getAround("126.509361","33.246212");
 		
-		List<LocationVO> SeoulTourList = tourService.get_TourLocation("39");
-		List<LocationVO> SeoulFoodList = foodService.get_FoodLocation("39");
-		List<LocationVO> SeoulLodgmentList = lodgmentService.get_LodgmentLocation("39");
+//		List<LocationVO> SeoulTourList = tourService.get_TourLocation("39");
+//		List<LocationVO> SeoulFoodList = foodService.get_FoodLocation("39");
+//		List<LocationVO> SeoulLodgmentList = lodgmentService.get_LodgmentLocation("39");
 
 		model.addAttribute("FB_JEJU", fblist);
 		model.addAttribute("ST_JEJU", fbst);
+		model.addAttribute("LAYOUT", "JEJU_IMG");
 		
 		model.addAttribute("JEJUAROUND",AroundList);
 		
-		model.addAttribute("JEJUtour",SeoulTourList);
-		model.addAttribute("JEJUfood",SeoulFoodList);
-		model.addAttribute("JEJUlodgment",SeoulLodgmentList);
+//		model.addAttribute("JEJUtour",SeoulTourList);
+//		model.addAttribute("JEJUfood",SeoulFoodList);
+//		model.addAttribute("JEJUlodgment",SeoulLodgmentList);
 
 		return null;
 	}
@@ -175,6 +182,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_JEONBUK", fblist);
 		model.addAttribute("ST_JEONBUK", fbst);
+		model.addAttribute("LAYOUT", "JEONBUK_IMG");
 		
 		model.addAttribute("JEONBUKAROUND",AroundList);
 		
@@ -190,7 +198,7 @@ public class FootBallController {
 		
 		model.addAttribute("FB_POHANG", fblist);
 		model.addAttribute("ST_POHANG", fbst);
-		
+		model.addAttribute("LAYOUT", "POHANG_IMG");
 
 		model.addAttribute("POHANGAROUND",AroundList);
 		
@@ -206,6 +214,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_SEONGNAM", fblist);
 		model.addAttribute("ST_SEONGNAM", fbst);
+		model.addAttribute("LAYOUT", "SEONGNAM_IMG");
 		
 		model.addAttribute("SEONGNAMAROUND",AroundList);
 
@@ -221,6 +230,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_SUWON_SS", fblist);
 		model.addAttribute("ST_SUWON_SS", fbst);
+		model.addAttribute("LAYOUT", "SUWON_SS_IMG");
 		
 		model.addAttribute("SUWONssAROUND",AroundList);
 
@@ -237,6 +247,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_SUWON", fblist);
 		model.addAttribute("ST_SUWON", fbst);
+		model.addAttribute("LAYOUT", "SUWON_IMG");
 		
 		model.addAttribute("SUWONAROUND",AroundList);
 
@@ -252,6 +263,7 @@ public class FootBallController {
 
 		model.addAttribute("FB_ULSAN", fblist);
 		model.addAttribute("ST_ULSAN", fbst);
+		model.addAttribute("LAYOUT", "ULSAN_IMG");
 		
 		model.addAttribute("ULSANAROUND",AroundList);
 		

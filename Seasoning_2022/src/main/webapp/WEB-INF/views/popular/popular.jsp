@@ -16,7 +16,7 @@
 							<c:forEach items="${TOURS}" var="TOUR">
 								<div class="attr-container">
 									<a href="${rootPath}/detail/tour_detail/${TOUR.contentid}" style="color: black">
-										<span class="img"><img src="${TOUR.firstimage2}"></span> <span>[명소]&nbsp; <b>${TOUR.title}</b></span> <span class="content"> <span>${SEOULtour.addr1}</span> <span>${SEOULtour.tel}</span>
+										<span class="img"><img src="${TOUR.firstimage2}" onerror="this.src='${rootPath}/static/images/image-error.png'"></span> <span>[명소]&nbsp; <b>${TOUR.title}</b></span> <span class="content"> <span>${TOUR.addr1}</span> <span>${TOUR.tel}</span>
 										</span>
 									</a>
 								</div>
@@ -45,7 +45,7 @@
 							<c:forEach items="${FOODS}" var="FOOD">
 								<div class="attr-container">
 									<a href="${rootPath}/detail/food_detail/${FOOD.contentid}" style="color: black">
-										<span class="img"><img src="${FOOD.firstimage2}"></span> <span>[식당]&nbsp; <b>${FOOD.title}</b></span> <span class="content"> <span>${SEOULfood.addr1}</span> <span>${SEOULfood.tel}</span>
+										<span class="img"><img src="${FOOD.firstimage2}" onerror="this.src='${rootPath}/static/images/image-error.png'"></span> <span>[식당]&nbsp; <b>${FOOD.title}</b></span> <span class="content"> <span>${FOOD.addr1}</span> <span>${FOOD.tel}</span>
 										</span>
 									</a>
 								</div>
@@ -73,7 +73,7 @@
 							<c:forEach items="${LODGMENTS}" var="LODGMENT">
 								<div class="attr-container">
 									<a href="${rootPath}/detail/lodge_detail/${LODGMENT.contentid}" style="color: black">
-										<span class="img"><img src="${LODGMENT.firstimage2}"></span> <span>[숙박]&nbsp; <b>${LODGMENT.title}</b></span> <span class="content"> <span>${SEOULlodgment.addr1}</span> <span>${SEOULlodgment.tel}</span>
+										<span class="img"><img src="${LODGMENT.firstimage2}" onerror=" this.src='${rootPath}/static/images/image-error.png'"></span> <span>[숙박]&nbsp; <b>${LODGMENT.title}</b></span> <span class="content"> <span>${LODGMENT.addr1}</span> <span>${LODGMENT.tel}</span>
 										</span>
 									</a>
 								</div>
@@ -94,5 +94,4 @@
 
 </div>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
-
 

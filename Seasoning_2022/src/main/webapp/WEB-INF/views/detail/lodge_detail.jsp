@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Insert title here</title>
 <link rel="stylesheet" href="${rootPath}/static/css/nav.css" />
-<link rel="stylesheet" href="${rootPath}/static/css/detail.css?ver=00001" />
+<link rel="stylesheet" href="${rootPath}/static/css/detail.css" />
 <link rel="stylesheet"
    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 <script>
@@ -55,67 +55,109 @@
                <td>${COMMONDETAIL.homepage}</td>
             </tr>
             
-            <c:if test="${not empty TOURDETAIL.chkbabycarriage}">
+            <c:if test="${not empty LODGEDETAIL.accomcountlodging}">
             <tr>
-               <th>유모차대여 정보</th>
-               <td>${TOURDETAIL.chkbabycarriage}</td>
+               <th>수용 가능인원</th>
+               <td>${LODGEDETAIL.accomcountlodging}</td>
             </tr>
             </c:if>
             
-            <c:if test="${not empty TOURDETAIL.chkpet}">
+            <c:if test="${not empty LODGEDETAIL.checkintime}">
             <tr>
-               <th>애완동물 동반 가능 여부</th>
-               <td>${TOURDETAIL.chkpet}</td>
+               <th>입실 시간</th>
+               <td>${LODGEDETAIL.checkintime}</td>
             </tr>
             </c:if>
             
             
-            <c:if test="${not empty TOURDETAIL.expagerange}">
+            <c:if test="${not empty LODGEDETAIL.checkouttime}">
                <tr>
-                  <th>체험 가능 연령</th>
-                  <td>${TOURDETAIL.expagerange}</td>
+                  <th>퇴실 시간</th>
+                  <td>${LODGEDETAIL.checkouttime}</td>
                </tr>
             </c:if>
             
-            <c:if test="${not empty TOURDETAIL.expguide}">            
+            <c:if test="${not empty LODGEDETAIL.chkcooking}">            
             <tr>
-               <th>체험 안내</th>
-               <td>${TOURDETAIL.expguide}</td>
+               <th>객실내 취사 여부</th>
+               <td>${LODGEDETAIL.chkcooking}</td>
             </tr>
             </c:if>
             
-            <c:if test="${not empty TOURDETAIL.infocenter}">   
+            <c:if test="${not empty LODGEDETAIL.foodplace}">   
+            <tr>
+               <th>식음료장</th>
+               <td>${LODGEDETAIL.foodplace}</td>
+            </tr>
+            </c:if>
+            
+            <c:if test="${not empty LODGEDETAIL.infocenterlodging}">   
             <tr>
                <th>문의 및 안내</th>
-               <td>${TOURDETAIL.infocenter}</td>
+               <td>${LODGEDETAIL.infocenterlodging}</td>
             </tr>
             </c:if>
             
-            <c:if test="${not empty TOURDETAIL.parking}">   
+            <c:if test="${not empty LODGEDETAIL.parkinglodging}">   
             <tr>
                <th>주차시설</th>
-               <td>${TOURDETAIL.parking}</td>
+               <td>${LODGEDETAIL.parkinglodging}</td>
             </tr>
             </c:if>
             
-            <c:if test="${not empty TOURDETAIL.restdate}">   
+            <c:if test="${not empty LODGEDETAIL.pickup}">   
             <tr>
-               <th>쉬는날</th>
-               <td>${TOURDETAIL.restdate}</td>
+               <th>픽업 서비스</th>
+               <td>${LODGEDETAIL.pickup}</td>
             </tr>
             </c:if>
             
-            <c:if test="${not empty TOURDETAIL.useseason}">   
+            <c:if test="${not empty LODGEDETAIL.reservationlodging}">   
             <tr>
-               <th>이용시기</th>
-               <td>${TOURDETAIL.useseason}</td>
+               <th>예약안내</th>
+               <td>${LODGEDETAIL.reservationlodging}</td>
             </tr>
             </c:if>
             
-            <c:if test="${not empty TOURDETAIL.usetime}">   
+            <c:if test="${not empty LODGEDETAIL.reservationurl}">   
             <tr>
-               <th>이용시간</th>
-               <td>${TOURDETAIL.usetime}</td>
+               <th>예약안내 홈페이지</th>
+               <td>${LODGEDETAIL.reservationurl}</td>
+            </tr>
+            </c:if>
+            
+            <c:if test="${not empty LODGEDETAIL.roomtype}">   
+            <tr>
+               <th>객실유형</th>
+               <td>${LODGEDETAIL.roomtype}</td>
+            </tr>
+            </c:if>
+            
+            <c:if test="${not empty LODGEDETAIL.scalelodging}">   
+            <tr>
+               <th>규모</th>
+               <td>${LODGEDETAIL.scalelodging}</td>
+            </tr>
+            </c:if>
+            
+            <c:if test="${not empty LODGEDETAIL.subfacility}">   
+            <tr>
+               <th>부대시설 (기타)</th>
+               <td>${LODGEDETAIL.subfacility}</td>
+            </tr>
+            </c:if>
+            
+            <c:if test="${not empty LODGEDETAIL.barbecue}">   
+            <tr>
+               <th>바비큐장 여부</th>
+               <td>${LODGEDETAIL.barbecue}</td>
+            </tr>
+            </c:if>
+            
+            <c:if test="${not empty LODGEDETAIL.refundregulation}">   
+            <tr>
+               <th>환불규정</th>
+               <td>${LODGEDETAIL.refundregulation}</td>
             </tr>
             </c:if>
             
@@ -130,7 +172,7 @@
       <div class="hj-detail-other">
          <c:forEach items="${AROUND}" begin="1" end="5" var="AROUND">
             <div class='hj-detail-otherbox'
-               OnClick="location.href ='${rootPath}/detail/tour_detail/${AROUND.contentid}'">
+               OnClick="location.href ='${rootPath}/detail/lodge_detail/${AROUND.contentid}'">
                <div class="hj-detail-foreach" data-isbn="${AROUND.contentid}">
                   <h3>이곳에서 ${AROUND.dist}m</h3>
                   <img src="${AROUND.firstimage2}"  onerror="this.src='${rootPath}/static/images/image-error.png'">

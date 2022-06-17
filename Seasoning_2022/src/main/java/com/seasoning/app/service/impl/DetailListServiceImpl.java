@@ -8,7 +8,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.XML;
 import org.springframework.stereotype.Service;
@@ -16,12 +15,10 @@ import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
 import com.seasoning.app.config.QualifierConfig;
 import com.seasoning.app.model.CommonDetailVO;
-import com.seasoning.app.model.FoodDetailVO;
-import com.seasoning.app.model.LodgmentDetailVO;
-import com.seasoning.app.model.TourDetailVO;
+import com.seasoning.app.model.FoodVO;
+import com.seasoning.app.model.LodgmentVO;
+import com.seasoning.app.model.TourListVO;
 import com.seasoning.app.service.DetailService;
-
-import lombok.extern.slf4j.Slf4j;
 
 @Service
 public class DetailListServiceImpl implements DetailService{
@@ -29,7 +26,7 @@ public class DetailListServiceImpl implements DetailService{
 	
 	//TODO  관광지
 	@Override
-	public TourDetailVO getTourDetail(String contentId) throws IOException {
+	public TourListVO getTourDetail(String contentId) throws IOException {
 		//공공데이터 키값하고 원하는 설정 연결하기
 		String url ="http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailIntro"; /*URL*/
 		try {
@@ -38,7 +35,7 @@ public class DetailListServiceImpl implements DetailService{
 			url += ("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*현재 페이지 번호 이거 필수값 아님 없애도 됨*/
 			url +=  ("&" + URLEncoder.encode("MobileOS","UTF-8") + "=" + URLEncoder.encode("ETC", "UTF-8")); /*IOS (아이폰), AND (안드로이드), WIN (원도우폰), ETC*/
 			url += ("&" + URLEncoder.encode("MobileApp","UTF-8") + "=" + URLEncoder.encode("AppTest", "UTF-8")); /*서비스명=어플명*/
-			url += ("&" + URLEncoder.encode("contentId","UTF-8") + "=" + URLEncoder.encode("2629074", "UTF-8")); /*서비스명=어플명*/
+			url += ("&" + URLEncoder.encode("contentId","UTF-8") + "=" + URLEncoder.encode(contentId, "UTF-8")); /*서비스명=어플명*/
 			url += ("&" + URLEncoder.encode("contentTypeId","UTF-8") + "=" + URLEncoder.encode("12", "UTF-8")); /*서비스명=어플명*/
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -90,7 +87,7 @@ public class DetailListServiceImpl implements DetailService{
       
         // VO에 저장
         Gson gson = new Gson();
-        TourDetailVO vo = gson.fromJson(item.toString(), TourDetailVO.class);
+        TourListVO vo = gson.fromJson(item.toString(), TourListVO.class);
         
         //값 지정해서 콘텐츠 아이디 뽑아버리기
         
@@ -99,7 +96,7 @@ public class DetailListServiceImpl implements DetailService{
 	
 	//TODO 음식
 	@Override
-	public FoodDetailVO getFoodDetail(String contentId) throws IOException {
+	public FoodVO getFoodDetail(String contentId) throws IOException {
 		//공공데이터 키값하고 원하는 설정 연결하기
 				String url ="http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailIntro"; /*URL*/
 				try {
@@ -108,7 +105,7 @@ public class DetailListServiceImpl implements DetailService{
 					url += ("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*현재 페이지 번호 이거 필수값 아님 없애도 됨*/
 					url +=  ("&" + URLEncoder.encode("MobileOS","UTF-8") + "=" + URLEncoder.encode("ETC", "UTF-8")); /*IOS (아이폰), AND (안드로이드), WIN (원도우폰), ETC*/
 					url += ("&" + URLEncoder.encode("MobileApp","UTF-8") + "=" + URLEncoder.encode("AppTest", "UTF-8")); /*서비스명=어플명*/
-					url += ("&" + URLEncoder.encode("contentId","UTF-8") + "=" + URLEncoder.encode("133324", "UTF-8")); /*서비스명=어플명*/
+					url += ("&" + URLEncoder.encode("contentId","UTF-8") + "=" + URLEncoder.encode(contentId, "UTF-8")); /*서비스명=어플명*/
 					url += ("&" + URLEncoder.encode("contentTypeId","UTF-8") + "=" + URLEncoder.encode("39", "UTF-8")); /*서비스명=어플명*/
 				} catch (UnsupportedEncodingException e) {
 					e.printStackTrace();
@@ -160,14 +157,14 @@ public class DetailListServiceImpl implements DetailService{
 		      
 		        // VO에 저장
 		        Gson gson = new Gson();
-		        FoodDetailVO vo = gson.fromJson(item.toString(), FoodDetailVO.class);
+		        FoodVO vo = gson.fromJson(item.toString(), FoodVO.class);
 		        
 		        //값 지정해서 콘텐츠 아이디 뽑아버리기
 		        return vo;
 	}
 
 	@Override
-	public LodgmentDetailVO getLodgmentDetail(String contentId) throws IOException {
+	public LodgmentVO getLodgmentDetail(String contentId) throws IOException {
 		//공공데이터 키값하고 원하는 설정 연결하기
 				String url ="http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailIntro"; /*URL*/
 				try {
@@ -176,7 +173,7 @@ public class DetailListServiceImpl implements DetailService{
 					url += ("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*현재 페이지 번호 이거 필수값 아님 없애도 됨*/
 					url +=  ("&" + URLEncoder.encode("MobileOS","UTF-8") + "=" + URLEncoder.encode("ETC", "UTF-8")); /*IOS (아이폰), AND (안드로이드), WIN (원도우폰), ETC*/
 					url += ("&" + URLEncoder.encode("MobileApp","UTF-8") + "=" + URLEncoder.encode("AppTest", "UTF-8")); /*서비스명=어플명*/
-					url += ("&" + URLEncoder.encode("contentId","UTF-8") + "=" + URLEncoder.encode("1877477", "UTF-8")); /*서비스명=어플명*/
+					url += ("&" + URLEncoder.encode("contentId","UTF-8") + "=" + URLEncoder.encode(contentId, "UTF-8")); /*서비스명=어플명*/
 					url += ("&" + URLEncoder.encode("contentTypeId","UTF-8") + "=" + URLEncoder.encode("32", "UTF-8")); /*서비스명=어플명*/
 				} catch (UnsupportedEncodingException e) {
 					e.printStackTrace();
@@ -228,7 +225,7 @@ public class DetailListServiceImpl implements DetailService{
 		      
 		        // VO에 저장
 		        Gson gson = new Gson();
-		        LodgmentDetailVO vo = gson.fromJson(item.toString(), LodgmentDetailVO.class);
+		        LodgmentVO vo = gson.fromJson(item.toString(), LodgmentVO.class);
 		        
 		        //값 지정해서 콘텐츠 아이디 뽑아버리기
 		        

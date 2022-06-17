@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const div_menu = document.querySelector("div.area-menu");
   const div_pop_view = document.querySelector("div.popular_view");
-  const div_btn = document.querySelector("div.btn-box");
 
-  const SLIDE_WIDTH = 1200;
+  const SLIDE_WIDTH = 300;
 
   let position = 0;
   let curPosition = 0;
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       if (button.className === "btn next") {
         console.log("넥스트 btn");
-        if (curPosition <= sldCount * 2) {
+        if (curPosition <= sldCount - 5) {
           console.log("Pos", position);
           position -= SLIDE_WIDTH;
           slides.style.transform = `translateX(${position}px)`;

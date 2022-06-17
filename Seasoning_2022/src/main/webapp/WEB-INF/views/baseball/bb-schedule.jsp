@@ -126,70 +126,70 @@
 						<c:forEach items="${BB_DUSAN}" var="DUSAN">
 							<tr>
 								<td>${DUSAN.st_date}</td>
-								<td>${DUSAN.st_match}</td>
+								<td>두산 &nbsp;:&nbsp; ${DUSAN.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_LG}" var="LG">
 							<tr>
 								<td>${LG.st_date}</td>
-								<td>${LG.st_match}</td>
+								<td>lg &nbsp;:&nbsp; ${LG.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_KIA}" var="KIA">
 							<tr>
 								<td>${KIA.st_date}</td>
-								<td>${KIA.st_match}</td>
+								<td>기아 &nbsp;:&nbsp; ${KIA.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_SSG}" var="SSG">
 							<tr>
 								<td>${SSG.st_date}</td>
-								<td>${SSG.st_match}</td>
+								<td>ssg &nbsp;:&nbsp; ${SSG.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_KIWOOM}" var="KIWOOM">
 							<tr>
 								<td>${KIWOOM.st_date}</td>
-								<td>${KIWOOM.st_match}</td>
+								<td>키움 &nbsp;:&nbsp; ${KIWOOM.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_KT}" var="KT">
 							<tr>
 								<td>${KT.st_date}</td>
-								<td>${KT.st_match}</td>
+								<td>kt &nbsp;:&nbsp; ${KT.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_HANWHA}" var="HANWHA">
 							<tr>
 								<td>${HANWHA.st_date}</td>
-								<td>${HANWHA.st_match}</td>
+								<td>한화 &nbsp;:&nbsp; ${HANWHA.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_SAMSUNG}" var="SAMSUNG">
 							<tr>
 								<td>${SAMSUNG.st_date}</td>
-								<td>${SAMSUNG.st_match}</td>
+								<td>삼성 &nbsp;:&nbsp; ${SAMSUNG.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_NC}" var="NC">
 							<tr>
 								<td>${NC.st_date}</td>
-								<td>${NC.st_match}</td>
+								<td>nc &nbsp;:&nbsp; ${NC.st_match}</td>
 							</tr>
 						</c:forEach>
 
 						<c:forEach items="${BB_LOTTE}" var="LOTTE">
 							<tr>
 								<td>${LOTTE.st_date}</td>
-								<td>${LOTTE.st_match}</td>
+								<td>롯데 &nbsp;:&nbsp; ${LOTTE.st_match}</td>
 							</tr>
 						</c:forEach>
 
