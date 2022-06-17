@@ -9,6 +9,9 @@ drop table tbl_bb_stadium;
 
 SELECT * FROM tbl_bb_stadium;
 
+		SELECT st_date, st_match
+		FROM tbl_schedule_dusan;
+
 SELECT bb_st_x, bb_st_y
 FROM tbl_bb_stadium;
 
@@ -200,6 +203,13 @@ SELECT G.fb_st_date, G.fb_st_time, G.fb_st_match
 		        ON ST.fb_st_pk = G.fb_st_pk
 		        WHERE ST.fb_st_pk ='fb_gangwon2'
 ORDER BY fb_st_seq;
+
+SELECT fb_st_date, fb_st_time, fb_st_match
+		FROM tbl_fb_schedule_gangwon1;
+        
+        SELECT fb_st_date, fb_st_time, fb_st_match
+		FROM tbl_fb_schedule_gangwon1
+		WHERE fb_st_pk ='fb_gangwon2';
 
 create table tbl_fb_schedule_gangwon2 (
     fb_st_seq      NUMBER(5)    PRIMARY KEY,
