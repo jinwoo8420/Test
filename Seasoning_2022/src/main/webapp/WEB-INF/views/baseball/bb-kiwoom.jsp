@@ -147,5 +147,5 @@
 </script>
 <script src="${rootPath}/static/js/bb_map.js?ver=2022-06-17-001"></script>
 <script src="${rootPath}/static/js/btn.js?var=2022-06-17-001"></script>
-<script src="${rootPath}/static/js/bb_popular_button.js?ver=2022-06-17-001"></script>
+<script src="${rootPath}/static/js/popular_button.js?ver=2022-06-17-001"></script>
 </html>

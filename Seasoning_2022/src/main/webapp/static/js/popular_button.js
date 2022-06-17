@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (button.tagName === "BUTTON") {
       const slides = button
         .closest("div.container-view")
-        .querySelector("div.slides"); // document.querySelector("div.slides");
+        .querySelector("div.slides");
 
       const sldCount = slides.querySelectorAll("img").length;
       console.log("Count", sldCount);
@@ -62,40 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-
-  // div_btn?.addEventListener("click", (e) => {
-  //   console.log("얖");
-  //   const slide_button = e.target;
-  //   if (slide_button.tagName === "BUTTON") {
-  //     const prevBtn = document.querySelector("button.prev");
-  //     const nextBtn = document.querySelector("button.next");
-  //     const slides = document.querySelector("div.slides");
-  //     const sldCount = document.querySelectorAll("div.slides div").length;
-
-  //     if (prevBtn) {
-  //       prevBtn.addEventListener("click", () => {
-  //         console.log("프리 btn");
-  //         if (curPosition > 0) {
-  //           position += SLIDE_WIDTH;
-  //           slides.style.transform = `translateX(${position}px)`;
-  //           slides.style.transition = `${0.8}s ease-out`;
-  //           curPosition--;
-  //         }
-  //       });
-  //     }
-  //     if (nextBtn) {
-  //       nextBtn.addEventListener("click", () => {
-  //         console.log("넥스트 btn");
-  //         if (curPosition <= sldCount - 16) {
-  //           position -= SLIDE_WIDTH;
-  //           slides.style.transform = `translateX(${position}px)`;
-  //           slides.style.transition = `${0.8}s ease-out`;
-  //           curPosition++;
-  //         }
-  //       });
-  //     }
-  //   }
-  // });
 
   /* 버튼 색상 변경 */
   var btns = document.getElementsByClassName("area-btn");

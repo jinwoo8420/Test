@@ -125,7 +125,6 @@
 		</div>
 	</div>
 			
-		<script src="${rootPath}/static/js/popular_silde.js?ver=2022-06-11-003"></script>
 		<link rel="stylesheet" href="${rootPath}/static/css/popular_view.css?ver=2022-06-16-006" />
 		<link rel="stylesheet" href="${rootPath}/static/css/area-view.css?ver20220616004" />
 		<script>
@@ -147,5 +146,5 @@
 </script>
 <script src="${rootPath}/static/js/bb_map.js?ver=2022-06-17-001"></script>
 <script src="${rootPath}/static/js/btn.js?var=2022-06-17-001"></script>
-<script src="${rootPath}/static/js/bb_popular_button.js?ver=2022-06-17-001"></script>
+<script src="${rootPath}/static/js/popular_button.js?ver=2022-06-17-001"></script>
 </html>
