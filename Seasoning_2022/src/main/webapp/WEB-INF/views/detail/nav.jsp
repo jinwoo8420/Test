@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html;charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
@@ -16,8 +15,9 @@
 
 			<div id="drop">
 				<ul id="menu">
-					<li id="logo"><a href="${rootPath}/"><img
-							src="${rootPath}/static/images/logo.png"></a></li>
+					<li id="logo"><a href="${rootPath}/">
+							<img src="${rootPath}/static/images/logo.png">
+						</a></li>
 					<li id="soccer"><a href="${rootPath}/football/fb-seoul">축구</a>
 						<ul class="drop-menu drop-soccer">
 							<li><a href="${rootPath}/football/fb-gimcheon">김천 상무</a></li>
@@ -34,19 +34,18 @@
 							<li><a href="${rootPath}/football/fb-ulsan">울산 현대</a></li>
 							<li><a href="${rootPath}/football/fb-pohang">포항 스틸러스</a></li>
 						</ul></li>
-					<li id="baseball"><a
-						href="${rootPath}/baseball/bb-dusan">야구</a>
+					<li id="baseball"><a href="${rootPath}/baseball/bb-kia">야구</a>
 						<ul class="drop-menu drop-baseball">
-							<li><a>KT 위즈</a></li>
-							<li><a>두산 베어스</a></li>
-							<li><a>삼성 라이온즈</a></li>
-							<li><a>LG 트윈스</a></li>
-							<li><a>키움 히어로즈</a></li>
-							<li><a>SSG 랜더스</a></li>
-							<li><a>NC 다이노스</a></li>
-							<li><a>롯데 자이언츠</a></li>
-							<li><a>KIA 타이거즈</a></li>
-							<li><a>한화 이글스</a></li>
+							<li><a href="${rootPath}/baseball/bb-kt">KT 위즈</a></li>
+							<li><a href="${rootPath}/baseball/bb-dusan">두산 베어스</a></li>
+							<li><a href="${rootPath}/baseball/bb-samsung">삼성 라이온즈</a></li>
+							<li><a href="${rootPath}/baseball/bb-lg">LG 트윈스</a></li>
+							<li><a href="${rootPath}/baseball/bb-kiwoom">키움 히어로즈</a></li>
+							<li><a href="${rootPath}/baseball/bb-ssg">SSG 랜더스</a></li>
+							<li><a href="${rootPath}/baseball/bb-nc">NC 다이노스</a></li>
+							<li><a href="${rootPath}/baseball/bb-lotte">롯데 자이언츠</a></li>
+							<li><a href="${rootPath}/baseball/bb-kia">KIA 타이거즈</a></li>
+							<li><a href="${rootPath}/baseball/bb-hanwha">한화 이글스</a></li>
 						</ul></li>
 					<li id="volleyball"><a>배구</a>
 						<ul class="drop-volleyball">
